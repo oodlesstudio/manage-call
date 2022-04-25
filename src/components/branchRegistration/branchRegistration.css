@@ -1,0 +1,90 @@
+/* Main View */
+.mainView {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background-default);
+  padding-top: 50px;
+}
+.sidebarOpened {
+  width: calc(100% - 216px);
+}
+.sidebarClosed {
+  width: calc(100% - 50px);
+}
+@media (max-width: 767px) {
+  .mainView {
+    padding-top: 88px;
+  }
+}
+@media (max-width: 768px) {
+  .sidebarOpened {
+    width: 100%;
+  }
+  .mainView{
+    min-height: 100vh;
+  }
+}
+
+/* Terminal CSS */
+.terminalContainer {
+  padding: 0 12px;
+}
+.breadcrumbHeading {
+  height: 34px;
+}
+.terminalWhiteBox {
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+.terminalWhiteBox .clientNameSelect {
+  margin-bottom: 12px;
+  width: 350px;
+}
+.terminalWhiteBox .lightBlueBox {
+  border: 1px dashed var(--color-primary-default);
+  width: 350px;
+  padding: 16px 0 18px;
+}
+.terminalWhiteBox .dropFileIcon {
+  fill: var(--drop-file-color);
+}
+.terminalWhiteBox .terminalMasterBox {
+  margin: 12px 0;
+}
+.terminalWhiteBox .terminalBtnBox {
+  width: 350px;
+}
+.terminalWhiteBox .kiHXWb,
+.terminalWhiteBox .dGSgsW {
+  border: none;
+  padding: 0;
+  height: 12px;
+}
+.terminalWhiteBox svg,
+.terminalWhiteBox .fVfcRr,
+.terminalWhiteBox .kTMxfv {
+  display: none;
+}
+.clientNameSelect .css-tj5bde-Svg{
+  display: inherit;
+}
+.terminalWhiteBox .browseFileText {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 425px) {
+  .breadcrumbHeading {
+    flex-direction: column-reverse;
+    align-items: flex-start !important;
+    margin: 12px 0;
+  }
+  .terminalWhiteBox .clientNameSelect,
+  .terminalWhiteBox .terminalBtnBox,
+  .terminalSmallBox {
+    width: 100%;
+  }
+  .terminalWhiteBox .lightBlueBox {
+    width: calc(100% - 35px);
+  }
+}

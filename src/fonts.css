@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?rm50kg');
+  src:  url('fonts/icomoon.eot?rm50kg#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?rm50kg') format('truetype'),
+    url('fonts/icomoon.woff?rm50kg') format('woff'),
+    url('fonts/icomoon.svg?rm50kg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Filter-Icon:before {
+  content: "\e92d";
+  color: var(--color-primary-default);
+}
+.icon-Vector-1:before {
+  content: "\e92e";
+  color: #109d49;
+}
+.icon-Vector-2:before {
+  content: "\e92f";
+  color: #ff5c49;
+}
+.icon-Vector-3:before {
+  content: "\e930";
+  color: #c54031;
+}
+.icon-Vector:before {
+  content: "\e931";
+  color: #c54031;
+}
+.icon-Dashboard:before {
+  content: "\e924";
+  color: var(--color-primary-default);
+}
+.icon-Housekeeping-Activity:before {
+  content: "\e925";
+  color: var(--color-primary-default);
+}
+.icon-Manual:before {
+  content: "\e926";
+  color: var(--color-primary-default);
+}
+.icon-New-Ticket:before {
+  content: "\e927";
+  color: var(--color-primary-default);
+}
+.icon-Reports:before {
+  content: "\e928";
+  color: var(--color-primary-default);
+}
+.icon-Terminal-Status:before {
+  content: "\e929";
+  color: var(--color-primary-default);
+}
+.icon-Ticket-Centre:before {
+  content: "\e92a";
+  color: var(--color-primary-default);
+}
+.icon-Ticket-History:before {
+  content: "\e92b";
+  color: var(--color-primary-default);
+}
+.icon-Uploads:before {
+  content: "\e92c";
+  color: var(--color-primary-default);
+}
+.icon-Hamburger:before {
+  content: "\e921";
+}
+.icon-Icon-2:before {
+  content: "\e91c";
+  color: var(--color-primary-default);
+}
+.icon-Icon:before {
+  content: "\e91e";
+  color: var(--color-primary-default);
+}
+.icon-Icon-1:before {
+  content: "\e91f";
+  color: var(--color-primary-default);
+}
+.icon-Action-Icons:before {
+  content: "\e900";
+  color: var(--color-primary-default);
+}
+.icon-ant-design_setting-outlined:before {
+  content: "\e901";
+  color: var(--color-primary-default);
+}
+.icon-Breadcrumb-Arrow:before {
+  content: "\e902";
+}
+.icon-fluent_person-16-regular:before {
+  content: "\e903";
+  color: var(--color-primary-default);
+}
+.icon-Hide:before {
+  content: "\e904";
+  color: var(--color-primary-default);
+}
+.icon-Icon-11:before {
+  content: "\e905";
+  color: var(--color-primary-default);
+}
+.icon-Icon-21:before {
+  content: "\e906";
+  color: var(--color-primary-default);
+}
+.icon-Icon-3:before {
+  content: "\e907";
+  color: var(--color-primary-default);
+}
+.icon-Icon-4:before {
+  content: "\e908";
+  color: var(--color-primary-default);
+}
+.icon-Icon-5:before {
+  content: "\e909";
+  color: var(--color-primary-default);
+}
+.icon-Icon-6:before {
+  content: "\e90a";
+  color: var(--color-primary-default);
+}
+.icon-Icon-7:before {
+  content: "\e90b";
+  color: var(--color-primary-default);
+}
+.icon-Icon-8:before {
+  content: "\e90c";
+  color: var(--color-primary-default);
+}
+.icon-Icon-9:before {
+  content: "\e90d";
+  color: var(--color-primary-default);
+}
+.icon-Icon-10:before {
+  content: "\e90e";
+  color: var(--color-primary-default);
+}
+.icon-Icon-111:before {
+  content: "\e90f";
+  color: var(--color-primary-default);
+}
+.icon-Icon-12:before {
+  content: "\e910";
+  color: var(--color-primary-default);
+}
+.icon-Icon-13:before {
+  content: "\e911";
+  color: var(--color-primary-default);
+}
+.icon-Icon1:before {
+  content: "\e912";
+  color: var(--color-primary-default);
+}
+.icon-ion_notifications-outline:before {
+  content: "\e913";
+  color: var(--color-primary-default);
+}
+.icon-Search:before {
+  content: "\e915";
+  color: var(--color-primary-default);
+}
+.icon-Sort-icon:before {
+  content: "\e916";
+  color: #868686;
+}
+.icon-Vector-11:before {
+  content: "\e917";
+  color: #f2994a;
+}
+.icon-Vector-21:before {
+  content: "\e918";
+  color: #c54031;
+}
+.icon-Vector1:before {
+  content: "\e91b";
+  color: var(--color-primary-default);
+}
