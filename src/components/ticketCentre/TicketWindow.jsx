@@ -25,9 +25,6 @@ const TicketWindow = () => {
 
   const [showFilters, setShowFilters] = useState(false);
 
-  const [selectError, setSelectError] = useState(false);
-  const changeSelectError = () => setSelectError(true);
-
   // Select Error
   const [clientName, setClientName] = useState(false);
   const changeClientName = () => setClientName(true);
@@ -124,7 +121,7 @@ const TicketWindow = () => {
               <div className="clientNameSelect col">
                 <label htmlFor="clientName">Bank</label>
                 <Select
-                  defaultValue={selectedOption}
+                  defaultValue={clientName}
                   onChange={() => {
                     setClientName();
                     changeClientName();
