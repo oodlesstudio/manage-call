@@ -66,7 +66,7 @@
 .summaryContentCenter tbody td {
   font-weight: 400;
   font-size: var(--font-size10);
-  color: #000;
+  color: var(--color-black);
   padding: 0;
   width: 25%;
   text-align: center;
@@ -177,12 +177,35 @@
   border-color: #e933a7;
 }
 .circleNoFive {
-  border-color: #109D49;
+  border-color: #109d49;
 }
 .circleNoSix {
-  border-color: #00B6EF;
+  border-color: #00b6ef;
 }
 .circleNoSeven {
-  border-color: #C54031;
+  border-color: #c54031;
+  color: #fff;
+}
+
+/* CSS By Anurag */
+.tableToggle {
+  width: 12px;
+  height: 12px;
+  background-color: #109d49;
+  border-radius: 50px;
+  margin-left: 9px;
+}
+
+.tableToggle .icon-Icon-2:before {
+  content: "\e900";
+  color: #fff;
+}
+
+.tableToggle.tableToggle-active {
+  background-color: #e4b830;
+}
+
+.tableToggle.tableToggle-active .icon-Icon-2:before {
+  content: "\e91c";
   color: #fff;
 }

@@ -1,0 +1,87 @@
+.oneGreyBox {
+  width: 42px;
+  height: 27px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: var(--fontSize-14);
+}
+.greyBoxTwo {
+  background-color: #e6e6e6;
+}
+.greyBoxThree {
+  background-color: #e0e0e0;
+}
+.greyBoxFour {
+  background-color: #d6d6d6;
+}
+.greyBoxFive {
+  background-color: #d0d0d0;
+}
+.greyBoxSix {
+  background-color: #c9c9c9;
+}
+.greyBoxSeven {
+  background-color: #e1ecff;
+}
+.greyBoxEight {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
+    #e1ecff;
+}
+.greyBoxNine {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    #e1ecff;
+}
+.greyBoxTen {
+  background-color: #c54031;
+  color: #fff;
+}
+.greyBoxEleven {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    #e1ecff;
+}
+
+.atmDownTableBox .table {
+  width: 100%;
+}
+.atmDownTableBox .table thead th {
+  border: 1px solid var(--color-table-border);
+}
+.atmDownTableBox .table tbody tr:last-child {
+  border-bottom: 1px solid var(--color-table-border);
+}
+
+.borderBottomRightRadius {
+  border-bottom-right-radius: inherit !important;
+}
+.borderTopRightRadius {
+  border-top-right-radius: inherit !important;
+}
+.borderTopLeftRadius {
+  border-top-left-radius: inherit !important;
+}
+.borderBottomLeftRadius {
+  border-bottom-left-radius: inherit !important;
+}
+
+.atmDownHead {
+  background-color: var(--sidebar-color);
+  height: 40px;
+  color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: var(--fontSize-16);
+  letter-spacing: -0.02em;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.atmDownCalendar {
+  width: 117px;
+}
+
+.aqw-table {
+  width: 100% !important;
+}

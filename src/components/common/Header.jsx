@@ -142,7 +142,7 @@ const Header = () => {
       <div className="headerLeft d-flex justify-content-between align-items-center">
         <div className="d-flex align-items-center">
           <button className="headerHamburger" onClick={handleShow}>
-            <span class="icon-Hamburger-Menu"></span>
+          <span class="icon-Hamburger"></span>
           </button>
           <OverlayTrigger
             placement="bottom"

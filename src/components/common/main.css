@@ -122,7 +122,7 @@
 }
 .identificationContainer .accordion-body .configSelectBoxTop .col {
   padding: 0 6px;
-  width: 25%;
+  width: 20%;
   flex: inherit;
   margin-top: 8px;
 }
@@ -358,7 +358,8 @@
   position: sticky;
   top: 0;
 }
-.tableBorderBox .table thead tr th {
+.tableBorderBox .table thead tr th,
+.tableBorderBox .table tbody tr th {
   font-weight: var(--font-weight-500);
   font-size: var(--font-size14);
   background-color: var(--color-secondary-light-defaut);
@@ -654,12 +655,14 @@
 }
 .previousPagination span:last-child {
   margin-left: 2px;
+  text-decoration: underline;
 }
 .nextPagination {
   margin-left: 4px;
 }
 .nextPagination span:first-child {
   margin-right: 2px;
+  text-decoration: underline;
 }
 .previousPagination:hover,
 .nextPagination:hover {

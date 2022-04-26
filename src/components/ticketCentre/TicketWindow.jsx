@@ -50,6 +50,14 @@ const TicketWindow = () => {
   //   Date Calendar
   const [startDate, setStartDate] = useState(new Date());
 
+  // Table Active State Toggle
+
+  const [toggleState, setToggleState] = useState(false);
+
+  const toggleTab = () => {
+    setToggleState(!toggleState);
+  };
+
   return (
     <div className="configLeft identificationContainer ticketCenterSection">
       {/* Breadcrumb */}
@@ -919,7 +927,7 @@ const TicketWindow = () => {
                       >
                         S. No.
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </label>
                     </div>
@@ -927,98 +935,98 @@ const TicketWindow = () => {
                   <th scope="col" style={{ width: "6.64%" }}>
                     Ticket ID
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "5.89%" }}>
                     Site ID
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "2.3%" }}></th>
                   <th scope="col" style={{ width: "6.46%" }}>
                     ATM ID
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "4.38%" }}>
                     Bank
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "6.33%" }}>
                     CRA
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "5.04%" }}>
                     CD Make
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "4.42%" }}>
                     Oueue Type
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "9.96%" }}>
                     Call Type
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "5.18%" }}>
                     Assianed To
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "4.82%" }}>
                     Worklist
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "6.95%" }}>
                     Call Date
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "4.82%" }}>
                     Ageing
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "5.49%" }}>
                     Last Updated
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "3.58%" }}>
                     ETA Date
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "2.96%" }}>
                     Edit
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                   <th scope="col" style={{ width: "8.75%" }}>
                     Comment
                     <Link to="/">
-                      <span className="icon-Table-Sorting"></span>
+                      <span className="icon-Sort-icon"></span>
                     </Link>
                   </th>
                 </tr>
@@ -1042,10 +1050,19 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center">
                       <p className="ticketIdBox">P</p>
                       8106034
-                      <div className="closeNestedTableButton">
+                      <div
+                        className={
+                          toggleState === true
+                            ? "tableToggle tableToggle-active"
+                            : "tableToggle"
+                        }
+                        onClick={() => {
+                          toggleTab();
+                        }}
+                      >
                         <span className="icon-Icon-2"></span>
                       </div>
                     </div>
@@ -1078,66 +1095,80 @@ const TicketWindow = () => {
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
                 <tr>
-                  <td colspan="18" className="ps-2 lightPinkNestedTable">
+                  <td
+                    colspan="18"
+                    className={
+                      toggleState === true
+                        ? "ps-2 lightPinkNestedTable"
+                        : "d-none"
+                    }
+                  >
                     <table className="table table-striped table-hover table-borderless align-middle mb-0">
                       <thead>
                         <tr>
-                          <th scope="col" style={{ width: "5.1%" }}></th>
+                          <th scope="col" style={{ width: "5.27%" }}></th>
                           <th scope="col" style={{ width: "6.64%" }}>
                             Ticket ID
                             <Link to="/">
-                              <span className="icon-Table-Sorting"></span>
+                              <span className="icon-Sort-icon"></span>
                             </Link>
                           </th>
                           <th scope="col" style={{ width: "5.89%" }}>
                             Oueue Type
                             <Link to="/">
-                              <span className="icon-Table-Sorting"></span>
+                              <span className="icon-Sort-icon"></span>
                             </Link>
                           </th>
                           <th scope="col" style={{ width: "2.3%" }}></th>
                           <th scope="col" style={{ width: "6.46%" }}>
                             Call Type
                             <Link to="/">
-                              <span className="icon-Table-Sorting"></span>
+                              <span className="icon-Sort-icon"></span>
                             </Link>
                           </th>
                           <th scope="col" style={{ width: "4.38%" }}>
                             Assigned To
                             <Link to="/">
-                              <span className="icon-Table-Sorting"></span>
+                              <span className="icon-Sort-icon"></span>
                             </Link>
                           </th>
                           <th scope="col" style={{ width: "6.33%" }}>
                             Worklist
                             <Link to="/">
-                              <span className="icon-Table-Sorting"></span>
+                              <span className="icon-Sort-icon"></span>
                             </Link>
                           </th>
                           <th scope="col" style={{ width: "5.04%" }}>
                             Call Date
                             <Link to="/">
-                              <span className="icon-Table-Sorting"></span>
+                              <span className="icon-Sort-icon"></span>
                             </Link>
                           </th>
                           <th scope="col" style={{ width: "4.42%" }}>
                             ETA Date
                             <Link to="/">
-                              <span className="icon-Table-Sorting"></span>
+                              <span className="icon-Sort-icon"></span>
                             </Link>
                           </th>
                           <th scope="col" style={{ width: "9.96%" }}>
                             Ageing
                             <Link to="/">
-                              <span className="icon-Table-Sorting"></span>
+                              <span className="icon-Sort-icon"></span>
                             </Link>
                           </th>
                           <th scope="col" style={{ width: "5.18%" }}>
                             Last Updated
                             <Link to="/">
-                              <span className="icon-Table-Sorting"></span>
+                              <span className="icon-Sort-icon"></span>
                             </Link>
                           </th>
+                          <th scope="col" style={{ width: "4.82%" }}></th>
+                          <th scope="col" style={{ width: "6.95%" }}></th>
+                          <th scope="col" style={{ width: "4.82%" }}></th>
+                          <th scope="col" style={{ width: "5.49%" }}></th>
+                          <th scope="col" style={{ width: "3.58%" }}></th>
+                          <th scope="col" style={{ width: "2.96%" }}></th>
+                          <th scope="col" style={{ width: "8.75%" }}></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -1153,6 +1184,8 @@ const TicketWindow = () => {
                           <td>ENR</td>
                           <td>6D:8H</td>
                           <td>Never</td>
+                          <td> </td>
+                          <td> </td>
                           <td> </td>
                           <td> </td>
                           <td> </td>
@@ -1183,7 +1216,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1234,7 +1267,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1285,11 +1318,11 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center">
                       <p className="ticketIdBox">P</p>
                       8106034
-                      <div className="OpenNestedTableButton">
-                        <span class="icon-Action-Icons"></span>
+                      <div className="tableToggle">
+                        <span className="icon-Icon-2"></span>
                       </div>
                     </div>
                   </td>
@@ -1339,11 +1372,11 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center">
                       <p className="ticketIdBox">P</p>
                       8106034
-                      <div className="OpenNestedTableButton">
-                        <span class="icon-Action-Icons"></span>
+                      <div className="tableToggle">
+                        <span className="icon-Icon-2"></span>
                       </div>
                     </div>
                   </td>
@@ -1393,7 +1426,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1444,7 +1477,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1495,11 +1528,11 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center">
                       <p className="ticketIdBox">P</p>
                       8106034
-                      <div className="OpenNestedTableButton">
-                        <span class="icon-Action-Icons"></span>
+                      <div className="tableToggle">
+                        <span className="icon-Icon-2"></span>
                       </div>
                     </div>
                   </td>
@@ -1549,7 +1582,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1595,16 +1628,17 @@ const TicketWindow = () => {
                         className="form-check-label d-flex align-items-center"
                         for="flexCheckOne"
                       >
+                        
                         <span class="icon-Vector-2 mr-9"></span>10
                       </label>
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center">
                       <p className="ticketIdBox">P</p>
                       8106034
-                      <div className="OpenNestedTableButton">
-                        <span class="icon-Action-Icons"></span>
+                      <div className="tableToggle">
+                        <span className="icon-Icon-2"></span>
                       </div>
                     </div>
                   </td>
@@ -1655,8 +1689,11 @@ const TicketWindow = () => {
                       aria-label="Previous"
                     >
                       <span
-                        className="icon-Dropdown-Arrow"
-                        style={{ fontSize: "12px" }}
+                        class="icon-Breadcrumb-Arrow"
+                        style={{
+                          fontSize: "16px",
+                          transform: "rotate(180deg)",
+                        }}
                       ></span>
                       <span>First</span>
                     </Link>
@@ -1694,8 +1731,8 @@ const TicketWindow = () => {
                     >
                       <span>Last</span>
                       <span
-                        className="icon-Dropdown-Arrow-1"
-                        style={{ fontSize: "12px" }}
+                        class="icon-Breadcrumb-Arrow"
+                        style={{ fontSize: "16px" }}
                       ></span>
                     </Link>
                   </li>
@@ -1729,43 +1766,43 @@ const TicketWindow = () => {
                       <th scope="col">
                         Terminal ID
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Date & Time
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Card No.
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reference No.
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Amount
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Response Code
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reversal Flag
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                     </tr>
@@ -1789,43 +1826,43 @@ const TicketWindow = () => {
                       <th scope="col">
                         Terminal ID
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Date & Time
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Card No.
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reference No.
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Amount
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Response Code
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reversal Flag
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                     </tr>
@@ -1853,43 +1890,43 @@ const TicketWindow = () => {
                       <th scope="col">
                         Terminal ID
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Date & Time
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Card No.
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reference No.
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Amount
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Response Code
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reversal Flag
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                     </tr>
@@ -1917,43 +1954,43 @@ const TicketWindow = () => {
                       <th scope="col">
                         Terminal ID
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Date & Time
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Card No.
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reference No.
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Txn Amount
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Response Code
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                       <th scope="col">
                         Reversal Flag
                         <Link to="/">
-                          <span className="icon-Table-Sorting"></span>
+                          <span className="icon-Sort-icon"></span>
                         </Link>
                       </th>
                     </tr>
