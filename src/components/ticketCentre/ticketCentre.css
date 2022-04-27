@@ -209,3 +209,31 @@
   content: "\e91c";
   color: #fff;
 }
+
+.errorFiltersModal .commentModalBody{
+  padding: 18px 30px 30px;
+  background-color: var(--color-background-default);
+}
+.errorFiltersModal .commentModalBody textarea{
+  border: 1px solid var(--color-border-default);
+  padding: 8px 0 0 12px;
+  font-size: var(--font-size14);
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  background-color: var(--border-box-bg);
+}
+.errorFiltersModal .commentModalBody textarea::placeholder{
+  font-size: var(--font-size14);
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+}
+.errorFiltersModal .commentModalBody .btnsBtm{
+  margin-top: 18px;
+  width: 100%;
+}
+.errorFiltersModal .commentModalBody .btnsBtm .btnPrimaryOutline{
+  width: 49%;
+}
+.errorFiltersModal .commentModalBody .btnsBtm .btnPrimary{
+  width: 49%;
+}

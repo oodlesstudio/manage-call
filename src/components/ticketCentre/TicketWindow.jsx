@@ -22,6 +22,7 @@ const options = [
 const TicketWindow = () => {
   const [resetFilters, setResetFilters] = useState(false);
   const [saveFilters, setSaveFilters] = useState(false);
+  const [editModal, setEditModal] = useState(false);
 
   const [showFilters, setShowFilters] = useState(false);
 
@@ -1050,7 +1051,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center ps-16">
                       <p className="ticketIdBox">P</p>
                       8106034
                       <div
@@ -1087,9 +1088,12 @@ const TicketWindow = () => {
                   <td>ENR</td>
                   <td>
                     <div className="d-flex justify-content-center">
-                      <div className="editYellowBox d-flex justify-content-center align-items-center">
+                      <button
+                        className="editYellowBox"
+                        onClick={() => setEditModal(!editModal)}
+                      >
                         <span className="icon-Vector-11"></span>
-                      </div>
+                      </button>
                     </div>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
@@ -1216,7 +1220,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center ps-16">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1267,7 +1271,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center ps-16">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1318,7 +1322,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center ps-16">
                       <p className="ticketIdBox">P</p>
                       8106034
                       <div className="tableToggle">
@@ -1372,7 +1376,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center ps-16">
                       <p className="ticketIdBox">P</p>
                       8106034
                       <div className="tableToggle">
@@ -1426,7 +1430,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center ps-16">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1477,7 +1481,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center ps-16">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1528,7 +1532,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center ps-16">
                       <p className="ticketIdBox">P</p>
                       8106034
                       <div className="tableToggle">
@@ -1582,7 +1586,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center ps-16">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1628,13 +1632,12 @@ const TicketWindow = () => {
                         className="form-check-label d-flex align-items-center"
                         for="flexCheckOne"
                       >
-                        
                         <span class="icon-Vector-2 mr-9"></span>10
                       </label>
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center ps-16">
                       <p className="ticketIdBox">P</p>
                       8106034
                       <div className="tableToggle">
@@ -1742,267 +1745,33 @@ const TicketWindow = () => {
           </div>
         </div>
 
-        {/* Save Filters */}
-        {referenceNo && (
+        {/* Reset Filters */}
+        {editModal && (
           <Modal
-            show={referenceNo}
-            onHide={() => setReferenceNo(!referenceNo)}
+            show={editModal}
+            onHide={() => setEditModal(!editModal)}
             centered
-            className="defaultThemeModal saveFiltersModal unmatchedTableModal"
+            className="defaultThemeModal saveFiltersModal errorFiltersModal"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
-                Transaction ID Details
+                Comment
               </Modal.Title>
             </Modal.Header>
-            <Modal.Body className="text-center">
-              <div className="w-100 table-responsive">
-                <p className="fontWeight-600 colorBlack unmatchedModalHeading">
-                  EJ Details
-                </p>
-                <table className="table table-striped table-hover table-borderless align-middle">
-                  <thead>
-                    <tr>
-                      <th scope="col">
-                        Terminal ID
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Txn Date & Time
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Card No.
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Reference No.
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Txn Amount
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Response Code
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Reversal Flag
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td colSpan="7">
-                        <em>No record(s) found...</em>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="w-100 table-responsive">
-                <p className="fontWeight-600 colorBlack unmatchedModalHeading">
-                  SW Details
-                </p>
-                <table className="table table-striped table-hover table-borderless align-middle">
-                  <thead>
-                    <tr>
-                      <th scope="col">
-                        Terminal ID
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Txn Date & Time
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Card No.
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Reference No.
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Txn Amount
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Response Code
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Reversal Flag
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>SVCB0001</td>
-                      <td>01/02/2022, 06:35:00 PM</td>
-                      <td>459115XXXXXX5716</td>
-                      <td>203218001138</td>
-                      <td>6100.00</td>
-                      <td>00</td>
-                      <td>N</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="w-100 table-responsive">
-                <p className="fontWeight-600 colorBlack unmatchedModalHeading">
-                  Network Details
-                </p>
-                <table className="table table-striped table-hover table-borderless align-middle">
-                  <thead>
-                    <tr>
-                      <th scope="col">
-                        Terminal ID
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Txn Date & Time
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Card No.
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Reference No.
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Txn Amount
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Response Code
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Reversal Flag
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>SVCB0001</td>
-                      <td>01/02/2022, 06:35:00 PM</td>
-                      <td>459115XXXXXX5716</td>
-                      <td>203218001138</td>
-                      <td>6100.00</td>
-                      <td>00</td>
-                      <td>N</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="w-100 table-responsive">
-                <p className="fontWeight-600 colorBlack unmatchedModalHeading">
-                  GL Details
-                </p>
-                <table className="table table-striped table-hover table-borderless align-middle">
-                  <thead>
-                    <tr>
-                      <th scope="col">
-                        Terminal ID
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Txn Date & Time
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Card No.
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Reference No.
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Txn Amount
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Response Code
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                      <th scope="col">
-                        Reversal Flag
-                        <Link to="/">
-                          <span className="icon-Sort-icon"></span>
-                        </Link>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td colSpan="7">
-                        <em>No record(s) found...</em>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <Modal.Body className="text-center commentModalBody">
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                placeholder="Enter your comment here..."
+              ></textarea>
+              <div className="text-center btnsBtm">
+                <button type="button" className="btnPrimaryOutline">
+                  Cancel
+                </button>
+                <button type="button" className="btnPrimary ms-2">
+                  Submit
+                </button>
               </div>
             </Modal.Body>
           </Modal>

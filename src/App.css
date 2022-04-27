@@ -402,6 +402,9 @@ input[type="number"] {
 .mr-9{
   margin-right: 9px !important;
 }
+.ps-16{
+  padding-left: 16px !important;
+}
 
 /* Input Text Box */
 .inputTextBox {
