@@ -128,10 +128,10 @@ const AgegingWindow = () => {
 
               {/* Table */}
               <div className="table-responsive tableContentBox atmDownTableBox">
-                <table className="table table-striped table-hover table-borderless align-middle">
+                <table className="table table-striped table-hover table-borderless align-middle queueWiseTableResponsive">
                   <thead>
                     <tr>
-                      <th scope="col" rowspan="2">
+                      <th scope="col" rowspan="2" className="ps-0">
                         Queue Type
                       </th>
                       <th scope="col">&#60;=24 Hrs</th>
@@ -151,7 +151,7 @@ const AgegingWindow = () => {
                     <tr>
                       <th
                         scope="col"
-                        className="borderTopLeftRadius borderBottomLeftRadius"
+                        className="borderTopLeftRadius borderBottomLeftRadius ps-0"
                       >
                         &#60;=1 D
                       </th>
@@ -1025,7 +1025,7 @@ const AgegingWindow = () => {
                   />
                 </svg>
               </span>
-              <Link to="/">
+              <Link to="/ageging-queue-wise">
                 <p className="fontSize12 colorPrimaryDefault">
                   Ageing - Queue Wise
                 </p>
@@ -1195,7 +1195,7 @@ const AgegingWindow = () => {
 
               {/* Table */}
               <div className="table-responsive tableContentBox">
-                <table className="table table-striped table-hover table-borderless align-middle mb-0 aqw-table">
+                <table className="table table-striped table-hover table-borderless align-middle mb-0 aqw-table queueWiseTableResponsive">
                   <thead>
                     <tr>
                       <th scope="col">

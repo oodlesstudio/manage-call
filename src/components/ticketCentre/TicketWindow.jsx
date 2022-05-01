@@ -32,9 +32,6 @@ const TicketWindow = () => {
 
   const [selectedOption, setSelectedOption] = useState(null);
 
-  // Modals
-  const [referenceNo, setReferenceNo] = useState(false);
-
   // Tooltip
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -48,11 +45,16 @@ const TicketWindow = () => {
     </Tooltip>
   );
 
+  const editButton = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Edit
+    </Tooltip>
+  );
+
   //   Date Calendar
   const [startDate, setStartDate] = useState(new Date());
 
   // Table Active State Toggle
-
   const [toggleState, setToggleState] = useState(false);
 
   const toggleTab = () => {
@@ -753,7 +755,7 @@ const TicketWindow = () => {
             aria-labelledby="unmatchedFiltersHeading"
             data-bs-parent="#unmatchedFilters"
           >
-            <div className="accordion-body">
+            <div className="accordion-body overflow-auto me-3">
               <div className="summaryRow">
                 <div className="summaryTableBox">
                   <p className="fontWeight-600 fontSize12">Severity</p>
@@ -851,7 +853,7 @@ const TicketWindow = () => {
       {/* Bottom Content */}
       <div className="configLeftBottom ticketCentreTableHeader">
         <div className="tableBorderBox">
-          <div className="d-flex justify-content-between align-items-center mt-3 mb-2">
+          <div className="d-flex justify-content-between align-items-center mt-3 mb-2 ticketCenterTableHeadTop">
             <div className="clientNameSelect configFormatEntities">
               <Select
                 defaultValue={selectedOption}
@@ -908,9 +910,29 @@ const TicketWindow = () => {
               </button>
             </div>
           </div>
+          <div className="d-flex justify-content-between align-items-center mt-2 mb-2 ticketCentreTableHeadBottom">
+            <div className="clientNameSelect addToWorkList ms-0">
+              <Select
+                defaultValue={selectedOption}
+                onChange={setSelectedOption}
+                options={options}
+                isSearchable={false}
+                classNamePrefix="reactSelectBox ms-0"
+                placeholder="Add to worklist"
+              />
+            </div>
+            <div className="d-flex">
+              <button type="button" className="btnPrimary ms-2">
+                Add
+              </button>
+              <button type="button" className="btnPrimaryOutline ms-2">
+                Clear
+              </button>
+            </div>
+          </div>
 
           {/* Table */}
-          <div className="table-responsive tableContentBox">
+          <div className="table-responsive tableContentBox ticketCentreTableResponsive">
             <table className="table table-striped table-hover table-borderless align-middle mb-0">
               <thead>
                 <tr>
@@ -1051,7 +1073,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center ps-16">
+                    <div className="d-flex align-items-center ps-18">
                       <p className="ticketIdBox">P</p>
                       8106034
                       <div
@@ -1087,14 +1109,20 @@ const TicketWindow = () => {
                   <td>0H:2M</td>
                   <td>ENR</td>
                   <td>
-                    <div className="d-flex justify-content-center">
-                      <button
-                        className="editYellowBox"
-                        onClick={() => setEditModal(!editModal)}
-                      >
-                        <span className="icon-Vector-11"></span>
-                      </button>
-                    </div>
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={editButton}
+                    >
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="editYellowBox"
+                          onClick={() => setEditModal(!editModal)}
+                        >
+                          <span className="icon-Vector-11"></span>
+                        </button>
+                      </div>
+                    </OverlayTrigger>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
@@ -1102,9 +1130,7 @@ const TicketWindow = () => {
                   <td
                     colspan="18"
                     className={
-                      toggleState === true
-                        ? "ps-2 lightPinkNestedTable"
-                        : "d-none"
+                      toggleState === true ? "lightPinkNestedTable" : "d-none"
                     }
                   >
                     <table className="table table-striped table-hover table-borderless align-middle mb-0">
@@ -1196,7 +1222,26 @@ const TicketWindow = () => {
                           <td> </td>
                           <td> </td>
                         </tr>
-                        <tr></tr>
+                        <tr>
+                          <td></td>
+                          <td>8106034</td>
+                          <td>Cash Management</td>
+                          <td></td>
+                          <td>Cash Low</td>
+                          <td>ganesh.modi</td>
+                          <td>ganesh.modi</td>
+                          <td>21-Mar-2022, 17:44</td>
+                          <td>ENR</td>
+                          <td>6D:8H</td>
+                          <td>Never</td>
+                          <td> </td>
+                          <td> </td>
+                          <td> </td>
+                          <td> </td>
+                          <td> </td>
+                          <td> </td>
+                          <td> </td>
+                        </tr>
                       </tbody>
                     </table>
                   </td>
@@ -1220,7 +1265,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center ps-16">
+                    <div className="d-flex align-items-center ps-18">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1244,11 +1289,20 @@ const TicketWindow = () => {
                   <td>0H:2M</td>
                   <td>ENR</td>
                   <td>
-                    <div className="d-flex justify-content-center">
-                      <div className="editYellowBox d-flex justify-content-center align-items-center">
-                        <span className="icon-Vector-11"></span>
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={editButton}
+                    >
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="editYellowBox"
+                          onClick={() => setEditModal(!editModal)}
+                        >
+                          <span className="icon-Vector-11"></span>
+                        </button>
                       </div>
-                    </div>
+                    </OverlayTrigger>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
@@ -1271,7 +1325,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center ps-16">
+                    <div className="d-flex align-items-center ps-18">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1295,11 +1349,20 @@ const TicketWindow = () => {
                   <td>0H:2M</td>
                   <td>ENR</td>
                   <td>
-                    <div className="d-flex justify-content-center">
-                      <div className="editYellowBox d-flex justify-content-center align-items-center">
-                        <span className="icon-Vector-11"></span>
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={editButton}
+                    >
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="editYellowBox"
+                          onClick={() => setEditModal(!editModal)}
+                        >
+                          <span className="icon-Vector-11"></span>
+                        </button>
                       </div>
-                    </div>
+                    </OverlayTrigger>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
@@ -1322,7 +1385,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center ps-16">
+                    <div className="d-flex align-items-center ps-18">
                       <p className="ticketIdBox">P</p>
                       8106034
                       <div className="tableToggle">
@@ -1349,11 +1412,20 @@ const TicketWindow = () => {
                   <td>0H:2M</td>
                   <td>ENR</td>
                   <td>
-                    <div className="d-flex justify-content-center">
-                      <div className="editYellowBox d-flex justify-content-center align-items-center">
-                        <span className="icon-Vector-11"></span>
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={editButton}
+                    >
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="editYellowBox"
+                          onClick={() => setEditModal(!editModal)}
+                        >
+                          <span className="icon-Vector-11"></span>
+                        </button>
                       </div>
-                    </div>
+                    </OverlayTrigger>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
@@ -1376,7 +1448,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center ps-16">
+                    <div className="d-flex align-items-center ps-18">
                       <p className="ticketIdBox">P</p>
                       8106034
                       <div className="tableToggle">
@@ -1403,11 +1475,20 @@ const TicketWindow = () => {
                   <td>0H:2M</td>
                   <td>ENR</td>
                   <td>
-                    <div className="d-flex justify-content-center">
-                      <div className="editYellowBox d-flex justify-content-center align-items-center">
-                        <span className="icon-Vector-11"></span>
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={editButton}
+                    >
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="editYellowBox"
+                          onClick={() => setEditModal(!editModal)}
+                        >
+                          <span className="icon-Vector-11"></span>
+                        </button>
                       </div>
-                    </div>
+                    </OverlayTrigger>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
@@ -1430,7 +1511,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center ps-16">
+                    <div className="d-flex align-items-center ps-18">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1454,11 +1535,20 @@ const TicketWindow = () => {
                   <td>0H:2M</td>
                   <td>ENR</td>
                   <td>
-                    <div className="d-flex justify-content-center">
-                      <div className="editYellowBox d-flex justify-content-center align-items-center">
-                        <span className="icon-Vector-11"></span>
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={editButton}
+                    >
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="editYellowBox"
+                          onClick={() => setEditModal(!editModal)}
+                        >
+                          <span className="icon-Vector-11"></span>
+                        </button>
                       </div>
-                    </div>
+                    </OverlayTrigger>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
@@ -1481,7 +1571,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center ps-16">
+                    <div className="d-flex align-items-center ps-18">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1505,11 +1595,20 @@ const TicketWindow = () => {
                   <td>0H:2M</td>
                   <td>ENR</td>
                   <td>
-                    <div className="d-flex justify-content-center">
-                      <div className="editYellowBox d-flex justify-content-center align-items-center">
-                        <span className="icon-Vector-11"></span>
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={editButton}
+                    >
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="editYellowBox"
+                          onClick={() => setEditModal(!editModal)}
+                        >
+                          <span className="icon-Vector-11"></span>
+                        </button>
                       </div>
-                    </div>
+                    </OverlayTrigger>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
@@ -1532,7 +1631,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center ps-16">
+                    <div className="d-flex align-items-center ps-18">
                       <p className="ticketIdBox">P</p>
                       8106034
                       <div className="tableToggle">
@@ -1559,11 +1658,20 @@ const TicketWindow = () => {
                   <td>0H:2M</td>
                   <td>ENR</td>
                   <td>
-                    <div className="d-flex justify-content-center">
-                      <div className="editYellowBox d-flex justify-content-center align-items-center">
-                        <span className="icon-Vector-11"></span>
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={editButton}
+                    >
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="editYellowBox"
+                          onClick={() => setEditModal(!editModal)}
+                        >
+                          <span className="icon-Vector-11"></span>
+                        </button>
                       </div>
-                    </div>
+                    </OverlayTrigger>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
@@ -1586,7 +1694,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center ps-16">
+                    <div className="d-flex align-items-center ps-18">
                       <p className="ticketIdBox">P</p>
                       8106034
                     </div>
@@ -1610,11 +1718,20 @@ const TicketWindow = () => {
                   <td>0H:2M</td>
                   <td>ENR</td>
                   <td>
-                    <div className="d-flex justify-content-center">
-                      <div className="editYellowBox d-flex justify-content-center align-items-center">
-                        <span className="icon-Vector-11"></span>
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={editButton}
+                    >
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="editYellowBox"
+                          onClick={() => setEditModal(!editModal)}
+                        >
+                          <span className="icon-Vector-11"></span>
+                        </button>
                       </div>
-                    </div>
+                    </OverlayTrigger>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
@@ -1637,7 +1754,7 @@ const TicketWindow = () => {
                     </div>
                   </td>
                   <td>
-                    <div className="d-flex align-items-center ps-16">
+                    <div className="d-flex align-items-center ps-18">
                       <p className="ticketIdBox">P</p>
                       8106034
                       <div className="tableToggle">
@@ -1664,11 +1781,20 @@ const TicketWindow = () => {
                   <td>0H:2M</td>
                   <td>ENR</td>
                   <td>
-                    <div className="d-flex justify-content-center">
-                      <div className="editYellowBox d-flex justify-content-center align-items-center">
-                        <span className="icon-Vector-11"></span>
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={editButton}
+                    >
+                      <div className="d-flex justify-content-center">
+                        <button
+                          className="editYellowBox"
+                          onClick={() => setEditModal(!editModal)}
+                        >
+                          <span className="icon-Vector-11"></span>
+                        </button>
                       </div>
-                    </div>
+                    </OverlayTrigger>
                   </td>
                   <td>abishek.dabholkar added comment as CDF ISSUE</td>
                 </tr>
@@ -1762,7 +1888,6 @@ const TicketWindow = () => {
               <textarea
                 class="form-control"
                 id="exampleFormControlTextarea1"
-                rows="3"
                 placeholder="Enter your comment here..."
               ></textarea>
               <div className="text-center btnsBtm">

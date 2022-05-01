@@ -1,12 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-// CSS
-import "./fieldConfig.css";
 // Components
 import SidebarMain from "../common/SidebarMain";
-import FieldMainWindow from "./FieldMainWindow";
+import AtmStatusWindow from "./AtmStatusWindow";
 
-const FieldConfig = () => {
+const AtmStatusMain = () => {
   const company = useSelector((state) => {
     return state.sidebarReducer;
   });
@@ -15,10 +13,10 @@ const FieldConfig = () => {
     <div className="mainView d-flex">
       <SidebarMain />
       <div className={company.sidebarOpen ? "sidebarOpened" : "sidebarClosed"}>
-        <FieldMainWindow />
+        <AtmStatusWindow />
       </div>
     </div>
   );
 };
 
-export default FieldConfig;
+export default AtmStatusMain;

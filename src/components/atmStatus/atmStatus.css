@@ -1,0 +1,52 @@
+.onsiteSection {
+  padding: 0 6px;
+}
+.onsiteSection .onsiteTitle {
+  padding: 18px 0;
+}
+.onsiteSection .row {
+  padding: 0 6px;
+}
+.onsiteSection .col,
+.onsiteSection .col-sm-4,
+.onsiteSection .col-lg-6 {
+  padding: 0 6px;
+}
+.onsiteSection .tableBorderBox .table thead tr th:first-child,
+.onsiteSection .tableBorderBox .table tbody tr td:first-child {
+  padding-left: 0;
+}
+.onsiteSection .table thead th,
+.onsiteSection .table tbody td {
+  border: 1px solid var(--table-inner-border);
+}
+.onsiteSection .table tbody {
+  --bs-table-bg: inherit;
+  --bs-table-accent-bg: inherit;
+}
+.onsiteSection .table tbody td {
+  background-color: var(--color-light-blue);
+  min-width: 50px;
+}
+.tableGreyBox {
+  background-color: var(--color-table-border) !important;
+}
+.tableDarkBlueBox {
+  background-color: var(--table-dark-blue-box) !important;
+}
+.tableChartBox .circleChartBox {
+  margin: 24px 0;
+}
+@media (max-width: 767px) {
+  .onSiteBigTable .table {
+    width: 410px;
+  }
+  .tableChartBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .tableChartBox .circleChartBox {
+    margin-left: 6px;
+  }
+}

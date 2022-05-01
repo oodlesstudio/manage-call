@@ -85,3 +85,10 @@
 .aqw-table {
   width: 100% !important;
 }
+
+
+@media (max-width: 768px){
+  .queueWiseTableResponsive{
+    width: 1000px !important;
+  }
+}

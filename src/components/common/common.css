@@ -220,7 +220,7 @@
     justify-content: space-between;
   }
   .headerLeft {
-    width: 375px;
+    width: 360px;
   }
   .headerRight {
     width: auto;
@@ -242,7 +242,7 @@
     margin: 0;
     flex-direction: column;
     align-items: flex-start !important;
-    padding: 12px 0 12px 12px;
+    padding: 12px 0 16px 12px;
   }
   .headerLeft img{
     width: 100%;
@@ -458,7 +458,8 @@
   }
 }
 @media (min-width: 768px) {
-  .sideBar {
+  .sideBar,
+  .sidebarSmall {
     min-height: calc(100vh - 82px);
   }
 }

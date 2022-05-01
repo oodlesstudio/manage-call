@@ -1,0 +1,211 @@
+.textAreaBox {
+  background-color: var(--border-box-bg);
+  border: 1px solid var(--color-border-default);
+  height: 64px;
+  padding: 12px;
+  font-family: Inter;
+  font-size: var(--font-size14);
+  line-height: 1.21;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+}
+
+/* First Blue Box */
+.newTicketFirstBlueBox {
+  min-height: inherit;
+}
+.newTicketFirstBlueBox .col {
+  width: 25%;
+}
+.atmActiveModal .modal-body img {
+  width: inherit;
+}
+
+/* Site Health Box */
+.siteDetailsBox {
+  background-color: var(--color-light-blue);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding-top: 12px;
+  padding-bottom: 6px;
+}
+.siteDetailsHeading {
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size14);
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+.siteDetailsText {
+  font-size: var(--font-size12);
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+.ipHead {
+  font-weight: 500;
+  font-size: var(--font-size12);
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+.ipHead span {
+  font-weight: 400;
+  margin-left: 4px;
+}
+.moreActionsBox {
+  background-color: var(--color-light-blue);
+  border: 1px solid var(--color-border-default);
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+}
+.healthStatusCounts {
+  margin: 18px 0 6px;
+}
+.moreActionsBox .icon-Vector1 {
+  font-size: 12px;
+}
+.siteHealthActive,
+.siteHealthInactive {
+  border-bottom: 12px dotted #109d49;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+}
+.siteHealthInactive {
+  border-color: #c54031;
+}
+
+/* Atm Ticket Status */
+.atmTicketStatus{
+  padding: 9px 35px 9px 9px;
+}
+.atmTicketStatus .siteHealthActive{
+  border-color: #E4B830;
+}
+.ticketStatusLeft {
+  font-size: var(--font-size14);
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  padding-left: 3px;
+}
+.ticketStatusCenter {
+  font-size: var(--font-size14);
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  padding: 0 6px;
+}
+.ticketStatusRight {
+  font-weight: 600;
+  font-size: var(--font-size14);
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+}
+.atmTicketStatus .col:last-child .ticketStatusRight{
+  color: #C54031;
+}
+
+/* Docket Window */
+.docketWindow .nav-tabs {
+  border-bottom: none;
+  margin-top: 18px;
+}
+.docketWindow .nav-tabs .nav-link {
+  background-color: var(--border-box-bg);
+  border: 1px solid var(--color-border-default);
+  border-radius: 8px 8px 0px 0px;
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size14);
+  color: var(--color-black);
+  padding: 9px 12px;
+}
+.docketWindow .nav-tabs .nav-link.active {
+  background-color: var(--color-secondary-light-defaut);
+  font-weight: var(--font-weight-600);
+  color: var(--color-primary-default);
+}
+.docketWindowSection {
+  background-color: var(--border-box-bg);
+  border: 1px solid var(--color-border-default);
+  border-radius: 0px 8px 8px 8px;
+  padding: 12px;
+  margin-top: 0 !important;
+}
+.docketWindowSection .configSelectBoxTop .col {
+  margin-top: 0 !important;
+  margin-bottom: 18px;
+}
+.docketWindowSection .table {
+  width: 100%;
+}
+
+/* Log Box */
+.logBoxSection .configSelectBoxTop .col {
+  margin-top: 0 !important;
+  margin-bottom: 12px;
+}
+.logBoxSection .configSelectBoxTop .col .form-check {
+  min-height: inherit;
+  margin-bottom: 0;
+  padding-left: 22px;
+}
+.logBoxSection .configSelectBoxTop .col .form-check-input {
+  margin-left: -22px;
+  margin-top: 2px;
+}
+.logBoxSection .configSelectBoxTop .col .form-check-input:checked {
+  background-color: var(--color-primary-default);
+  border-color: var(--color-primary-default);
+}
+.logBoxSection .configSelectBoxTop .col .form-check-inline label {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.logBox {
+  height: 90px;
+  background-color: var(--color-disabled);
+  border: 1px solid var(--color-border-default);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  padding-top: 12px;
+  overflow-y: auto;
+}
+.logBox ul {
+  margin-bottom: 0;
+  padding-left: 28px;
+}
+.logBox ul li {
+  font-size: var(--font-size14);
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+}
+
+/* Last Table */
+.newTicketLastTable .tableBorderBox {
+  padding-top: 12px;
+}
+.newTicketLastTable .tableBorderBox .table {
+  width: 100%;
+}
+.newTicketLastTable .tableBorderBox .table thead tr th:first-child,
+.newTicketLastTable .tableBorderBox .table tbody tr td:first-child {
+  padding-left: 0;
+}
+
+/* Buttons Absolute Div */
+.btnsAbsoluteDiv {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: var(--footer-bg);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+  padding: 5px;
+  z-index: 10;
+}
+.btnsAbsoluteDiv .btnPrimaryOutline {
+  border-color: var(--color-border-default);
+  font-weight: 500;
+  color: var(--grey-btn-text);
+}

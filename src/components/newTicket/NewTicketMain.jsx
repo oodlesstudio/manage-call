@@ -1,24 +1,22 @@
 import React from "react";
 import { useSelector } from "react-redux";
-// CSS
-import "./onlineCbr.css";
 // Components
 import SidebarMain from "../common/SidebarMain";
-import CbrMainWindow from "./CbrMainWindow";
+import NewTicketWindow from "./NewTicketWindow";
 
-const OnlineCbr = () => {
+const NewTicketMain = () => {
   const company = useSelector((state) => {
     return state.sidebarReducer;
   });
-  
+
   return (
     <div className="mainView d-flex">
       <SidebarMain />
       <div className={company.sidebarOpen ? "sidebarOpened" : "sidebarClosed"}>
-        <CbrMainWindow />
+        <NewTicketWindow />
       </div>
     </div>
   );
 };
 
-export default OnlineCbr;
+export default NewTicketMain;

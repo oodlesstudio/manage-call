@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AgegingQueueWise from "../pages/AgegingQueueWise";
 // Components
 import TicketCentre from "../pages/TicketCentre";
+import AgegingQueueWise from "../pages/AgegingQueueWise";
+import AtmStatus from "../pages/AtmStatus";
+import NewTicket from "../pages/NewTicket";
 
 const router = () => {
   return (
@@ -10,6 +12,8 @@ const router = () => {
       <Routes>
         <Route path="/" element={<TicketCentre />} />
         <Route path="/ageging-queue-wise" element={<AgegingQueueWise />} />
+        <Route path="/new-ticket" element={<NewTicket />} />
+        <Route path="/atm-status" element={<AtmStatus />} />
       </Routes>
     </BrowserRouter>
   );
