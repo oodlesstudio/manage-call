@@ -34,9 +34,9 @@
 .tableDarkBlueBox {
   background-color: var(--table-dark-blue-box) !important;
 }
-.tableChartBox .circleChartBox {
+/* .tableChartBox .circleChartBox {
   margin: 24px 0;
-}
+} */
 @media (max-width: 767px) {
   .onSiteBigTable .table {
     width: 410px;

@@ -5,12 +5,21 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Modal, Tooltip, OverlayTrigger } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Dropdown } from "react-bootstrap";
 
 // Images
 import Pdf from "../../images/common/pdf.svg";
 import Excel from "../../images/common/excel.svg";
 import ActiveImg from "../../images/common/Active.svg";
 import InActiveImg from "../../images/common/InActive.svg";
+
+// import Swiper core and required modules
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
 
 const options = [
   { value: "10 Entries", label: "10 Entries" },
@@ -27,6 +36,13 @@ const NewTicketWindow = () => {
   const [atmInactive, setAtmInactive] = useState(false);
 
   const [editModal, setEditModal] = useState(false);
+
+  // Modal
+  const [dispatchHistory, setDispatchHistory] = useState(false);
+
+  // dropdown
+
+  const [terminalDetails, setTerminalDetails] = useState(false);
 
   // Select Error
   const [clientName, setClientName] = useState(false);
@@ -106,9 +122,9 @@ const NewTicketWindow = () => {
       {/* Search Criteria */}
       <div className="configLeftTop searchCriteriaBox">
         <div className="position-relative">
-          <div className="lightBlueBox configTopBlueBox newTicketFirstBlueBox">
+          <div className="lightBlueBox configTopBlueBox configTopBlueBox-2 newTicketFirstBlueBox">
             <div className="configSelectBoxTop row">
-              <div className="clientNameSelect col">
+              <div className="clientNameSelect col-sm-12 col-md-3">
                 <label htmlFor="terminalCode">Site ID</label>
                 <input
                   type="text"
@@ -119,7 +135,7 @@ const NewTicketWindow = () => {
                 />
               </div>
 
-              <div className="clientNameSelect col">
+              <div className="clientNameSelect col-sm-12 col-md-3">
                 <label htmlFor="terminalCode">ATM ID</label>
                 <input
                   type="text"
@@ -130,7 +146,7 @@ const NewTicketWindow = () => {
                 />
               </div>
 
-              <div className="clientNameSelect col">
+              <div className="clientNameSelect col-sm-12 col-md-3">
                 <label htmlFor="terminalCode">Serial Number</label>
                 <input
                   type="text"
@@ -141,8 +157,10 @@ const NewTicketWindow = () => {
                 />
               </div>
 
-              <div className="clientNameSelect col">
-                <label htmlFor="terminalCode">Mobile/Account Number</label>
+              <div className="clientNameSelect col-sm-12 col-md-3">
+                <label htmlFor="terminalCode text-wrap">
+                  Mobile/Account Number
+                </label>
                 <input
                   type="text"
                   name="terminalCode"
@@ -223,7 +241,7 @@ const NewTicketWindow = () => {
       <div className="configLeftBottom newTicketLastTable">
         <div className="tableBorderBox pt-0 pb-3">
           <div className="row siteDetailsBox">
-            <div className="col-3">
+            <div className="col-lg-3 col-sm-4 col-xs-12">
               <p className="siteDetailsHeading">Site Details</p>
               <p className="siteDetailsText">
                 S1ECD183901 <br /> Karur Vysya Bank Platinum, <br /> OKI, On
@@ -240,7 +258,7 @@ const NewTicketWindow = () => {
               </p>
             </div>
 
-            <div className="col-3">
+            <div className="col-lg-3 col-sm-4 col-xs-12">
               <p className="siteDetailsHeading">Brancg/Landlord</p>
               <p className="siteDetailsText">
                 CHENNAI MANDAVELI Old No. 40 <br /> and 41, New No. 77A and 79A,{" "}
@@ -250,7 +268,7 @@ const NewTicketWindow = () => {
               </p>
             </div>
 
-            <div className="col-3">
+            <div className="col-lg-3 col-sm-4 col-xs-12">
               <p className="siteDetailsHeading">Field Service Team</p>
               <p className="ipHead">
                 SH:<span>Lorem Ipsom Dolor</span>
@@ -266,17 +284,21 @@ const NewTicketWindow = () => {
               </p>
             </div>
 
-            <div className="col-3">
-              <p className="siteDetailsHeading">Others</p>
-              <p className="ipHead">
-                Link Site:<span>Lorem Ipsom Dolor</span>
-              </p>
-              <p className="ipHead">
-                Site Accessibility:<span>Lorem Ipsom Dolor</span>
-              </p>
-              <p className="ipHead">
-                AC AMC Status:<span>Lorem Ipsom Dolor</span>
-              </p>
+            <div className="col-lg-3 col-12">
+              <div>
+                <p className="siteDetailsHeading mt-md-2 pt-md-1 mt-lg-0">Others</p>
+                <div className=" d-lg-block d-md-flex align-items-center justify-content-between d-xs-block  ">
+                  <p className="ipHead me-4">
+                    Link Site:<span>Lorem Ipsom Dolor</span>
+                  </p>
+                  <p className="ipHead me-4">
+                    Site Accessibility:<span>Lorem Ipsom Dolor</span>
+                  </p>
+                  <p className="ipHead me-4">
+                    AC AMC Status:<span>Lorem Ipsom Dolor</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -291,15 +313,50 @@ const NewTicketWindow = () => {
               delay={{ show: 250, hide: 400 }}
               overlay={moreActionTooltip}
             >
-              <button className="moreActionsBox d-flex align-items-center justify-content-center">
-                <span className="icon-Vector1"></span>
-              </button>
+              <div className="moreActionsBox atmSlideBox d-flex align-items-center justify-content-center">
+                <span
+                  className="icon-Vector1"
+                  onClick={() => setTerminalDetails(!terminalDetails)}
+                ></span>
+                <Dropdown className="atmOptionsDropdown">
+                  <Dropdown.Toggle
+                    variant="none"
+                    id="dropdown-basic"
+                  ></Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item>
+                      <div
+                        onClick={() => setDispatchHistory(!dispatchHistory)}
+                        className="dropdownInner"
+                      >
+                        Dispatch History
+                      </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">
+                      <Link to="/" className="dropdownInner">
+                        History
+                      </Link>
+                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">
+                      <Link to="/" className="dropdownInner">
+                        Feeds
+                      </Link>
+                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-4">
+                      <Link to="/" className="dropdownInner border-bottom-0">
+                        Site Info
+                      </Link>
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </div>
             </OverlayTrigger>
           </div>
 
           {/* Table */}
           <div className="table-responsive tableContentBox">
-            <table className="table table-striped table-hover table-borderless align-middle mb-0">
+            <table className="table tab-table table-striped table-hover table-borderless align-middle mb-0">
               <thead>
                 <tr>
                   <th scope="col" style={{ width: "12.72%" }}></th>
@@ -396,7 +453,7 @@ const NewTicketWindow = () => {
 
           {/* Table */}
           <div className="table-responsive tableContentBox">
-            <table className="table table-striped table-hover table-borderless align-middle mb-0">
+            <table className="table tab-table table-striped table-hover table-borderless align-middle mb-0">
               <thead>
                 <tr>
                   <th scope="col">Balance Date</th>
@@ -427,7 +484,7 @@ const NewTicketWindow = () => {
       <div className="configLeftBottom newTicketLastTable">
         <div className="tableBorderBox pt-0 pb-3">
           <div className="row siteDetailsBox atmTicketStatus">
-            <div className="col">
+            <div className="col col-xs-12">
               <div className="d-flex align-items-center">
                 <svg
                   width="12"
@@ -446,16 +503,18 @@ const NewTicketWindow = () => {
                 <p className="ticketStatusRight">8106167</p>
               </div>
             </div>
-            <div className="col">
-              <div className="d-flex justify-content-center align-items-center">
+            <div className="col col-xs-12 ticketmobileheader">
+              <div className="d-flex justify-content-sm-center justify-content-start align-items-center">
                 <div className="siteHealthActive"></div>
-                <p className="ticketStatusLeft">Ticket Status</p>
+                <p className="ticketStatusLeft text-nowrap">Ticket Status</p>
                 <p className="ticketStatusCenter">:</p>
-                <p className="ticketStatusRight">Open - Not Dispatched</p>
+                <p className="ticketStatusRight text-nowrap">
+                  Open - Not Dispatched
+                </p>
               </div>
             </div>
-            <div className="col">
-              <div className="d-flex justify-content-end align-items-center">
+            <div className="col col-xs-12 ticketmobileheader">
+              <div className="d-flex justify-content-sm-end justify-content-start align-items-center">
                 <svg
                   width="12"
                   height="auto"
@@ -597,10 +656,10 @@ const NewTicketWindow = () => {
 
       {/* Docket Window */}
       <div className="docketWindow">
-        <ul className="nav nav-tabs" id="myTab" role="tablist">
+        <ul className="nav nav-tabs nav-mobile-tabs" id="myTab" role="tablist">
           <li className="nav-item" role="presentation">
             <button
-              className="nav-link active"
+              className="nav-link nav-mobile-link active"
               id="home-tab"
               data-bs-toggle="tab"
               data-bs-target="#home"
@@ -614,7 +673,7 @@ const NewTicketWindow = () => {
           </li>
           <li className="nav-item" role="presentation">
             <button
-              className="nav-link"
+              className="nav-link nav-mobile-link"
               id="profile-tab"
               data-bs-toggle="tab"
               data-bs-target="#profile"
@@ -623,12 +682,12 @@ const NewTicketWindow = () => {
               aria-controls="profile"
               aria-selected="false"
             >
-              Exscalation
+              Escalation
             </button>
           </li>
           <li className="nav-item" role="presentation">
             <button
-              className="nav-link"
+              className="nav-link nav-mobile-link"
               id="profile-tab"
               data-bs-toggle="tab"
               data-bs-target="#profile"
@@ -642,7 +701,7 @@ const NewTicketWindow = () => {
           </li>
           <li className="nav-item" role="presentation">
             <button
-              className="nav-link"
+              className="nav-link nav-mobile-link"
               id="profile-tab"
               data-bs-toggle="tab"
               data-bs-target="#profile"
@@ -656,7 +715,7 @@ const NewTicketWindow = () => {
           </li>
           <li className="nav-item" role="presentation">
             <button
-              className="nav-link"
+              className="nav-link nav-mobile-link"
               id="profile-tab"
               data-bs-toggle="tab"
               data-bs-target="#profile"
@@ -670,7 +729,7 @@ const NewTicketWindow = () => {
           </li>
           <li className="nav-item" role="presentation">
             <button
-              className="nav-link"
+              className="nav-link nav-mobile-link"
               id="profile-tab"
               data-bs-toggle="tab"
               data-bs-target="#profile"
@@ -694,7 +753,7 @@ const NewTicketWindow = () => {
           >
             <div className="configLeftBottom tableBorderBox docketWindowSection">
               <div className="configSelectBoxTop row">
-                <div className="clientNameSelect col">
+                <div className="clientNameSelect col-lg col-4 newcol">
                   <label htmlFor="AssignedTo">Assigned To</label>
                   <Select
                     defaultValue={clientName}
@@ -714,7 +773,7 @@ const NewTicketWindow = () => {
                   )}
                 </div>
 
-                <div className="clientNameSelect col">
+                <div className="clientNameSelect col-lg col-4 newcol">
                   <label htmlFor="InputType">Input Type</label>
                   <Select
                     defaultValue={clientName}
@@ -734,7 +793,7 @@ const NewTicketWindow = () => {
                   )}
                 </div>
 
-                <div className="clientNameSelect col">
+                <div className="clientNameSelect col-lg col-4 newcol">
                   <label htmlFor="DocketNo">Docket No.</label>
                   <input
                     type="text"
@@ -744,7 +803,7 @@ const NewTicketWindow = () => {
                   />
                 </div>
 
-                <div className="clientNameSelect col">
+                <div className="clientNameSelect col-lg newcol col-12 newcol-12 d-lg-block d-md-flex align-items-center justify-content-center">
                   <div className="d-flex align-items-end h-100">
                     <div className="d-flex align-items-center">
                       <button className="btnPrimary">Add Visit</button>
@@ -758,7 +817,7 @@ const NewTicketWindow = () => {
 
               {/* Table */}
               <div className="table-responsive tableContentBox">
-                <table className="table table-striped table-hover table-borderless align-middle mb-0">
+                <table className="table tab-table table-striped table-hover table-borderless align-middle mb-0">
                   <thead>
                     <tr>
                       <th scope="col">Visit</th>
@@ -810,7 +869,7 @@ const NewTicketWindow = () => {
             </div>
             <div className="clientNameSelect col">
               <label className="mb-3">ETA Status</label>
-              <div>
+              <div className="d-md-flex align-items-center d-block w-100">
                 <div className="form-check form-check-inline">
                   <input
                     className="form-check-input"
@@ -819,7 +878,10 @@ const NewTicketWindow = () => {
                     id="flexRadioDefault1"
                     checked
                   />
-                  <label className="form-check-label" for="flexRadioDefault1">
+                  <label
+                    className="form-check-label w-100 text-nowrap"
+                    for="flexRadioDefault1"
+                  >
                     ETA Received
                   </label>
                 </div>
@@ -830,7 +892,10 @@ const NewTicketWindow = () => {
                     name="flexRadioDefault"
                     id="flexRadioDefault2"
                   />
-                  <label className="form-check-label" for="flexRadioDefault2">
+                  <label
+                    className="form-check-label w-100 text-nowrap"
+                    for="flexRadioDefault2"
+                  >
                     ETA Not Received
                   </label>
                 </div>
@@ -876,8 +941,8 @@ const NewTicketWindow = () => {
             </div>
           </div>
 
-          <div className="configSelectBoxTop row">
-            <div className="clientNameSelect col">
+          <div className="configSelectBoxTop configSelectBoxTop row">
+            <div className="clientNameSelect col-lg-3 col-md-6">
               <label htmlFor="ActivityLog">Activity Log</label>
               <textarea
                 className="form-control textAreaBox"
@@ -885,7 +950,7 @@ const NewTicketWindow = () => {
                 placeholder="Type here..."
               ></textarea>
             </div>
-            <div className="clientNameSelect col">
+            <div className="clientNameSelect col-lg-3 col-md-6">
               <label htmlFor="ReportedProblem">Reported Problem</label>
               <textarea
                 className="form-control textAreaBox"
@@ -893,7 +958,7 @@ const NewTicketWindow = () => {
                 placeholder="Type here..."
               ></textarea>
             </div>
-            <div className="clientNameSelect col">
+            <div className="clientNameSelect col-lg-3 col-md-6">
               <label htmlFor="WorkPerformed">Work Performed</label>
               <textarea
                 className="form-control textAreaBox"
@@ -901,7 +966,7 @@ const NewTicketWindow = () => {
                 placeholder="Type here..."
               ></textarea>
             </div>
-            <div className="clientNameSelect col">
+            <div className="clientNameSelect col-lg-3 col-md-6">
               <label htmlFor="PartsExchanged">Parts Exchanged</label>
               <textarea
                 className="form-control textAreaBox"
@@ -974,8 +1039,8 @@ const NewTicketWindow = () => {
           </div>
 
           {/* Table */}
-          <div className="table-responsive tableContentBox">
-            <table className="table table-striped table-hover table-borderless align-middle mb-0">
+          <div className="table-responsive tableContentBox ">
+            <table className="table tab-table table-striped table-hover table-borderless align-middle mb-0">
               <thead>
                 <tr>
                   <th scope="col">Ticket ID</th>
@@ -1103,7 +1168,7 @@ const NewTicketWindow = () => {
           show={editModal}
           onHide={() => setEditModal(!editModal)}
           centered
-          className="defaultThemeModal saveFiltersModal errorFiltersModal"
+          className="defaultThemeModal saveFiltersModal errorFiltersModal modalDialogCenteredFix"
         >
           <Modal.Header closeButton>
             <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -1124,6 +1189,337 @@ const NewTicketWindow = () => {
               <button type="button" className="btnPrimary ms-2">
                 Submit
               </button>
+            </div>
+          </Modal.Body>
+        </Modal>
+      )}
+
+      {/* Dispatch History */}
+      {dispatchHistory && (
+        <Modal
+          show={dispatchHistory}
+          onHide={() => setDispatchHistory(!dispatchHistory)}
+          centered
+          className="defaultThemeModal dispatchHistoryModal unmatchedTableModal "
+          id="dispatchHistoryModal"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title className="fontSize16-sm letterSpacing-2">
+              Dispatch History
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {/* Writer(CRA) Summary */}
+            {/* carousal */}
+            <div className="CRA-Carousal">
+              <p className="fontSize14 fontSize14-sb">Writer(CRA) Summary</p>
+              <div className="position-relative mt-3">
+                <Swiper
+                  slidesPerView={"auto"}
+                  spaceBetween={22}
+                  className="mySwiper CRA-Swiper position-static"
+                  navigation={true}
+                  modules={[Navigation]}
+                >
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 ">May-2021</p>
+                      <p className="CRA-Text2">73</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 ">Jun-2021</p>
+                      <p className="CRA-Text2">73</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 ">Jul-2021</p>
+                      <p className="CRA-Text2">73</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 ">Aug-2021</p>
+                      <p className="CRA-Text2">73</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 ">Sep-2021</p>
+                      <p className="CRA-Text2">73</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 ">Oct-2021</p>
+                      <p className="CRA-Text2">73</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 ">Nov-2021</p>
+                      <p className="CRA-Text2">31</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 "> Dec-2021</p>
+                      <p className="CRA-Text2">32</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 "> Jan-2022</p>
+                      <p className="CRA-Text2">35</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 "> Feb-2022</p>
+                      <p className="CRA-Text2">35</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 "> Mar-2022</p>
+                      <p className="CRA-Text2">35</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="CRA-Slide">
+                    <div>
+                      <p className="CRA-Text1 "> Apr-2022</p>
+                      <p className="CRA-Text2">35</p>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            </div>
+
+            {/* Table */}
+            <div className="CRA-Table">
+              <p className="CRA-TableHeading">Writer(CRA) Details</p>
+              {/* Table Head */}
+              <div className="d-flex justify-content-between align-items-center mt-3 mb-2">
+                <div className="clientNameSelect configFormatEntities">
+                  <Select
+                    defaultValue={selectedOption}
+                    onChange={setSelectedOption}
+                    options={options}
+                    isSearchable={false}
+                    classNamePrefix="reactSelectBox"
+                    placeholder="10 Entries"
+                  />
+                </div>
+                <div className="d-flex">
+                  <div className="form-group has-search">
+                    <span className="icon-Search form-control-feedback"></span>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Search"
+                    />
+                  </div>
+
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 250, hide: 400 }}
+                    overlay={renderTooltip}
+                  >
+                    <button type="button" className="iconButtonBox">
+                      <img src={Pdf} alt="Pdf" />
+                    </button>
+                  </OverlayTrigger>
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 250, hide: 400 }}
+                    overlay={renderTooltipExcel}
+                  >
+                    <button type="button" className="iconButtonBox">
+                      <img src={Excel} alt="Excel" />
+                    </button>
+                  </OverlayTrigger>
+                </div>
+              </div>
+
+              {/* Table */}
+              <div className="table-responsive tableContentBox">
+                <table className="table table-striped table-hover table-borderless align-middle mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        S. No.
+                        <a href="/">
+                          <span className="icon-Sort-icon"></span>
+                        </a>
+                      </th>
+                      <th scope="col">
+                        Ticket ID
+                        <a href="/">
+                          <span className="icon-Sort-icon"></span>
+                        </a>
+                      </th>
+                      <th scope="col">
+                        Call Date
+                        <a href="/">
+                          <span className="icon-Sort-icon"></span>
+                        </a>
+                      </th>
+                      <th scope="col">
+                        Vendor
+                        <a href="/">
+                          <span className="icon-Sort-icon"></span>
+                        </a>
+                      </th>
+                      <th scope="col">
+                        Call Type
+                        <a href="/">
+                          <span className="icon-Sort-icon"></span>
+                        </a>
+                      </th>
+                      <th scope="col">
+                        Category
+                        <a href="/">
+                          <span className="icon-Sort-icon"></span>
+                        </a>
+                      </th>
+                      <th scope="col">
+                        Sub Category
+                        <a href="/">
+                          <span className="icon-Sort-icon"></span>
+                        </a>
+                      </th>
+                      <th scope="col">
+                        Ageing
+                        <a href="/">
+                          <span className="icon-Sort-icon"></span>
+                        </a>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>7380588</td>
+                      <td>02-Dec-2021, 11:42</td>
+                      <td>Writer(CRA)</td>
+                      <td>Dispenser Error</td>
+                      <td>ATM Hardware</td>
+                      <td>Dispenser Problem</td>
+                      <td>5H:31M</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>7380588</td>
+                      <td>02-Dec-2021, 11:42</td>
+                      <td>Writer(CRA)</td>
+                      <td>Dispenser Error</td>
+                      <td>ATM Hardware</td>
+                      <td>Dispenser Problem</td>
+                      <td>5H:31M</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>7380588</td>
+                      <td>02-Dec-2021, 11:42</td>
+                      <td>Writer(CRA)</td>
+                      <td>Dispenser Error</td>
+                      <td>ATM Hardware</td>
+                      <td>Dispenser Problem</td>
+                      <td>5H:31M</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>7380588</td>
+                      <td>02-Dec-2021, 11:42</td>
+                      <td>Writer(CRA)</td>
+                      <td>Dispenser Error</td>
+                      <td>ATM Hardware</td>
+                      <td>Dispenser Problem</td>
+                      <td>5H:31M</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>7380588</td>
+                      <td>02-Dec-2021, 11:42</td>
+                      <td>Writer(CRA)</td>
+                      <td>Dispenser Error</td>
+                      <td>ATM Hardware</td>
+                      <td>Dispenser Problem</td>
+                      <td>5H:31M</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Pagination */}
+              <div className="paginationBox d-flex align-items-center justify-content-between my-12">
+                <div className="paginationLeft fontSize12">
+                  Showing 1 to 10 of 49 entries
+                </div>
+
+                <div className="paginationRight">
+                  <nav aria-label="Page navigation example">
+                    <ul className="pagination">
+                      <li className="page-item">
+                        <Link
+                          className="page-link previousPagination"
+                          to="/"
+                          aria-label="Previous"
+                        >
+                          <span
+                            className="icon-Breadcrumb-Arrow"
+                            style={{
+                              fontSize: "16px",
+                              transform: "rotate(180deg)",
+                            }}
+                          ></span>
+                          <span>First</span>
+                        </Link>
+                      </li>
+                      <li className="page-item">
+                        <Link className="page-link paginationBottom" to="/">
+                          1
+                        </Link>
+                      </li>
+                      <li className="page-item">
+                        <Link className="page-link paginationBottom" to="/">
+                          2
+                        </Link>
+                      </li>
+                      <li className="page-item active">
+                        <Link className="page-link paginationBottom" to="/">
+                          3
+                        </Link>
+                      </li>
+                      <li className="page-item">
+                        <Link className="page-link paginationBottom" to="/">
+                          4
+                        </Link>
+                      </li>
+                      <li className="page-item">
+                        <Link className="page-link paginationBottom" to="/">
+                          5
+                        </Link>
+                      </li>
+                      <li className="page-item">
+                        <Link
+                          className="page-link nextPagination"
+                          to="/"
+                          aria-label="Next"
+                        >
+                          <span>Last</span>
+                          <span
+                            className="icon-Breadcrumb-Arrow"
+                            style={{ fontSize: "16px" }}
+                          ></span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </div>
           </Modal.Body>
         </Modal>

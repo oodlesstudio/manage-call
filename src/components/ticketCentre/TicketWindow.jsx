@@ -688,7 +688,7 @@ const TicketWindow = () => {
             show={resetFilters}
             onHide={() => setResetFilters(!resetFilters)}
             centered
-            className="defaultThemeModal saveFiltersModal errorFiltersModal"
+            className="defaultThemeModal saveFiltersModal errorFiltersModal modalDialogCenteredFix"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -710,7 +710,7 @@ const TicketWindow = () => {
             show={saveFilters}
             onHide={() => setSaveFilters(!saveFilters)}
             centered
-            className="defaultThemeModal saveFiltersModal"
+            className="defaultThemeModal saveFiltersModal modalDialogCenteredFix"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -755,7 +755,7 @@ const TicketWindow = () => {
             aria-labelledby="unmatchedFiltersHeading"
             data-bs-parent="#unmatchedFilters"
           >
-            <div className="accordion-body overflow-auto me-3">
+            <div className="accordion-body">
               <div className="summaryRow">
                 <div className="summaryTableBox">
                   <p className="fontWeight-600 fontSize12">Severity</p>
@@ -1877,7 +1877,7 @@ const TicketWindow = () => {
             show={editModal}
             onHide={() => setEditModal(!editModal)}
             centered
-            className="defaultThemeModal saveFiltersModal errorFiltersModal"
+            className="defaultThemeModal saveFiltersModal errorFiltersModal modalDialogCenteredFix"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">

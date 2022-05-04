@@ -236,18 +236,24 @@
   width: 49%;
 }
 
-.ticketCentreTableResponsive .table{
+.ticketCentreTableResponsive .table {
   width: 1800px;
 }
 .ticketCentreTableHeadBottom .ticketCenterTableHeadTop .addToWorkList {
   display: none;
 }
+
+.ticketCentreTableHeadBottom {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   .ticketCentreTableHeader .ticketCenterTableHeadTop .addToWorkList,
   .ticketCentreTableHeader .ticketCenterTableHeadTop .btnPrimary,
   .ticketCentreTableHeader .ticketCenterTableHeadTop .btnPrimaryOutline {
     display: none;
   }
+
   .ticketCentreTableHeader .ticketCenterTableHeadTop .has-search .form-control {
     width: 100%;
   }
@@ -255,13 +261,27 @@
     width: 100%;
     margin-right: 3px;
   }
-  .ticketCentreTableHeadBottom .ticketCenterTableHeadTop .addToWorkList {
-    display: inherit;
+  .ticketCentreTableHeadBottom {
+    display: flex !important;
   }
   .ticketCentreTableHeader .ticketCentreTableHeadBottom .addToWorkList {
     width: 100% !important;
   }
   .summaryRow {
-    width: 1000px;
+    flex-direction: column;
   }
+  .summaryRow .summaryTableBox:first-child,
+  .summaryRow .summaryTableBox:nth-child(2),
+  .summaryRow .summaryTableBox:last-child{
+    width: 100%;
+    margin-left: 0;
+  }
+  .errorFiltersModal .commentModalBody .btnsBtm .btnPrimaryOutline{
+    width: 48%;
+  }
+}
+
+
+.modalDialogCenteredFix .modal-dialog{
+  max-width: 400px !important;
 }

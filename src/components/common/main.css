@@ -502,10 +502,12 @@
   padding-right: 6px;
 }
 .reactSelectBox__option:hover {
-  background-color: var(--selectbox-hover);
+  background-color: var(--header-background);
+  color: var(--color-black);
 }
 .reactSelectBox__option--is-focused {
-  background-color: var(--selectbox-hover) !important;
+  background-color: var(--header-background) !important;
+  color: var(--color-black);
 }
 .configFormatEntities {
   width: 115px;
