@@ -34,9 +34,25 @@
 .tableDarkBlueBox {
   background-color: var(--table-dark-blue-box) !important;
 }
+
+.apexcharts-text.apexcharts-datalabel-value {
+  fill: var(--color-black);
+  font-size: var(--font-size14);
+}
+
+
 /* .tableChartBox .circleChartBox {
   margin: 24px 0;
 } */
+
+
+.atm-status-table.table-borderless.table thead tr th{
+      font-size: var(--font-size12);
+}
+.atm-status-table.table-borderless.table tbody tr td {
+font-size: var(--font-size12);
+}
+
 @media (max-width: 767px) {
   .onSiteBigTable .table {
     width: 410px;

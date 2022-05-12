@@ -110,6 +110,7 @@ a {
   --grey-btn-text: #484949;
   --table-inner-border: #FAFAFA;
   --table-dark-blue-box: #C5D9FB;
+  --light-pink-bg: rgba(251, 210, 206, 0.4)
 }
 [data-theme="light"] {
   /* Colors Light Theme */
@@ -146,6 +147,7 @@ a {
   --grey-btn-text: #484949;
   --table-inner-border: #FAFAFA;
   --table-dark-blue-box: #C5D9FB;
+  --light-pink-bg: rgba(251, 210, 206, 0.4)
 }
 [data-theme="dark"] {
   /* Colors Dark Theme */
@@ -184,6 +186,7 @@ a {
   --grey-btn-text: #424f66;
   --table-inner-border: #424f66;
   --table-dark-blue-box: #242b35;
+  --light-pink-bg: rgba(75, 24, 19, 0.4)
 }
 
 /* Font Sizes */

@@ -890,7 +890,7 @@
   border-width: 2px 2px 0 0 !important;
 }
 .react-datepicker__header {
-  background-color: var(--header-background) !important;
+  background-color: var(--color-secondary-light-defaut) !important;
   border-bottom: none !important;
   border-top-left-radius: 8px !important;
   border-top-right-radius: 8px !important;

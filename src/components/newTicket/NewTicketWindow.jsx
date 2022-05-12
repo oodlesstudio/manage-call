@@ -286,7 +286,9 @@ const NewTicketWindow = () => {
 
             <div className="col-lg-3 col-12">
               <div>
-                <p className="siteDetailsHeading mt-md-2 pt-md-1 mt-lg-0">Others</p>
+                <p className="siteDetailsHeading mt-md-2 pt-md-1 mt-lg-0">
+                  Others
+                </p>
                 <div className=" d-lg-block d-md-flex align-items-center justify-content-between d-xs-block  ">
                   <p className="ipHead me-4">
                     Link Site:<span>Lorem Ipsom Dolor</span>
@@ -1216,79 +1218,79 @@ const NewTicketWindow = () => {
               <div className="position-relative mt-3">
                 <Swiper
                   slidesPerView={"auto"}
-                  spaceBetween={22}
+                  spaceBetween={24}
                   className="mySwiper CRA-Swiper position-static"
                   navigation={true}
                   modules={[Navigation]}
                 >
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 ">May-2021</p>
                       <p className="CRA-Text2">73</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 ">Jun-2021</p>
                       <p className="CRA-Text2">73</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 ">Jul-2021</p>
                       <p className="CRA-Text2">73</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 ">Aug-2021</p>
                       <p className="CRA-Text2">73</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 ">Sep-2021</p>
                       <p className="CRA-Text2">73</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 ">Oct-2021</p>
                       <p className="CRA-Text2">73</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 ">Nov-2021</p>
                       <p className="CRA-Text2">31</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 "> Dec-2021</p>
                       <p className="CRA-Text2">32</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 "> Jan-2022</p>
                       <p className="CRA-Text2">35</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 "> Feb-2022</p>
                       <p className="CRA-Text2">35</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 "> Mar-2022</p>
                       <p className="CRA-Text2">35</p>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="CRA-Slide">
-                    <div>
+                    <div className="d-flex align-items-center justify-content-center flex-column">
                       <p className="CRA-Text1 "> Apr-2022</p>
                       <p className="CRA-Text2">35</p>
                     </div>
@@ -1344,7 +1346,7 @@ const NewTicketWindow = () => {
               </div>
 
               {/* Table */}
-              <div className="table-responsive tableContentBox">
+              <div className="table-responsive tableContentBox tableBorderBox p-0">
                 <table className="table table-striped table-hover table-borderless align-middle mb-0">
                   <thead>
                     <tr>
@@ -1410,7 +1412,7 @@ const NewTicketWindow = () => {
                       <td>5H:31M</td>
                     </tr>
                     <tr>
-                      <td>1</td>
+                      <td>2</td>
                       <td>7380588</td>
                       <td>02-Dec-2021, 11:42</td>
                       <td>Writer(CRA)</td>
@@ -1420,7 +1422,7 @@ const NewTicketWindow = () => {
                       <td>5H:31M</td>
                     </tr>
                     <tr>
-                      <td>1</td>
+                      <td>3</td>
                       <td>7380588</td>
                       <td>02-Dec-2021, 11:42</td>
                       <td>Writer(CRA)</td>
@@ -1430,7 +1432,7 @@ const NewTicketWindow = () => {
                       <td>5H:31M</td>
                     </tr>
                     <tr>
-                      <td>1</td>
+                      <td>4</td>
                       <td>7380588</td>
                       <td>02-Dec-2021, 11:42</td>
                       <td>Writer(CRA)</td>
@@ -1440,7 +1442,57 @@ const NewTicketWindow = () => {
                       <td>5H:31M</td>
                     </tr>
                     <tr>
-                      <td>1</td>
+                      <td>5</td>
+                      <td>7380588</td>
+                      <td>02-Dec-2021, 11:42</td>
+                      <td>Writer(CRA)</td>
+                      <td>Dispenser Error</td>
+                      <td>ATM Hardware</td>
+                      <td>Dispenser Problem</td>
+                      <td>5H:31M</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>7380588</td>
+                      <td>02-Dec-2021, 11:42</td>
+                      <td>Writer(CRA)</td>
+                      <td>Dispenser Error</td>
+                      <td>ATM Hardware</td>
+                      <td>Dispenser Problem</td>
+                      <td>5H:31M</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>7380588</td>
+                      <td>02-Dec-2021, 11:42</td>
+                      <td>Writer(CRA)</td>
+                      <td>Dispenser Error</td>
+                      <td>ATM Hardware</td>
+                      <td>Dispenser Problem</td>
+                      <td>5H:31M</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>7380588</td>
+                      <td>02-Dec-2021, 11:42</td>
+                      <td>Writer(CRA)</td>
+                      <td>Dispenser Error</td>
+                      <td>ATM Hardware</td>
+                      <td>Dispenser Problem</td>
+                      <td>5H:31M</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>7380588</td>
+                      <td>02-Dec-2021, 11:42</td>
+                      <td>Writer(CRA)</td>
+                      <td>Dispenser Error</td>
+                      <td>ATM Hardware</td>
+                      <td>Dispenser Problem</td>
+                      <td>5H:31M</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
                       <td>7380588</td>
                       <td>02-Dec-2021, 11:42</td>
                       <td>Writer(CRA)</td>

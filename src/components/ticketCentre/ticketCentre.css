@@ -126,7 +126,7 @@
   align-items: center;
 }
 .callTypeBox {
-  color: #c54031 !important;
+  color: var(--color-secondary-default) !important;
 }
 .editYellowBox {
   background: #fff9d7;
@@ -144,10 +144,13 @@
   width: 70px;
 }
 .tableBorderBox .table .lightPinkNestedTable {
-  --bs-table-bg: var(--color-secondary-light-defaut);
-  --bs-table-accent-bg: var(--color-secondary-light-defaut);
-  background-color: var(--color-secondary-light-defaut) !important;
+  --bs-table-bg: var(--light-pink-bg);
+  --bs-table-accent-bg: var(--light-pink-bg);
+  background-color: var(--light-pink-bg) !important;
   padding: 6px !important;
+}
+.tableBorderBox .table .lightPinkNestedTable .table thead tr th{
+  background-color: var(--light-pink-bg);
 }
 .closeNestedTableButton {
   width: 12px;

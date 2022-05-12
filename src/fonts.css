@@ -83,6 +83,8 @@
 }
 .icon-Hamburger:before {
   content: "\e921";
+  color: var(--color-black);
+  font-size: 24px;
 }
 .icon-Icon-2:before {
   content: "\e91c";

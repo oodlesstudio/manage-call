@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import { Link } from "react-router-dom";
 import "react-datepicker/dist/react-datepicker.css";
@@ -60,6 +60,61 @@ const TicketWindow = () => {
   const toggleTab = () => {
     setToggleState(!toggleState);
   };
+
+  // -------------------- CheckBox Logic ---------------------------------
+
+  const [checkedAll, setCheckedAll] = useState(false);
+  const [checked, setChecked] = useState({
+    nr1: false,
+    nr2: false,
+    nr3: false,
+    nr4: false,
+    nr5: false,
+    nr6: false,
+    nr7: false,
+    nr8: false,
+    nr9: false,
+    nr10: false,
+  });
+
+  /* -------------------- TOGGLES checK STATE BASED ON inputName -------------------- */
+
+  const toggleCheck = (inputName) => {
+    setChecked((prevState) => {
+      const newState = { ...prevState };
+      newState[inputName] = !prevState[inputName];
+      return newState;
+    });
+  };
+
+  /* -------------------- CHECKS OR UNCHECKS ALL FROM SELECT ALL CLICK -------------------- */
+
+  const selectAll = (value) => {
+    setCheckedAll(value);
+    setChecked((prevState) => {
+      const newState = { ...prevState };
+      for (const inputName in newState) {
+        newState[inputName] = value;
+      }
+      return newState;
+    });
+  };
+
+  /* -------------------- EFFECT TO CONTROL CHECKED_ALL STATE -------------------- */
+
+  useEffect(() => {
+    let allChecked = true;
+    for (const inputName in checked) {
+      if (checked[inputName] === false) {
+        allChecked = false;
+      }
+    }
+    if (allChecked) {
+      setCheckedAll(true);
+    } else {
+      setCheckedAll(false);
+    }
+  }, [checked]);
 
   return (
     <div className="configLeft identificationContainer ticketCenterSection">
@@ -301,7 +356,7 @@ const TicketWindow = () => {
           {showFilters ? (
             <div className="lightBlueBox configTopBlueBox absoluteFiltersBox">
               <div className="d-flex justify-content-between align-items-center configLeftFilters">
-                <h6 className="fontWeight-600 colorBlack">Filters</h6>
+                <h6 className="fontWeight-600 colorBlack">Search Criteria</h6>
                 <button
                   type="button"
                   className="allFiltersBtn"
@@ -943,6 +998,8 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckDefault"
+                        onChange={(event) => selectAll(event.target.checked)}
+                        checked={checkedAll}
                       />
                       <label
                         className="form-check-label"
@@ -1063,12 +1120,22 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckOne"
+                        name="nr1"
+                        onChange={() => toggleCheck("nr1")}
+                        checked={checked["nr1"]}
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
                         for="flexCheckOne"
                       >
-                        <div className="circleNo"></div>1
+                        <OverlayTrigger
+                          placement="top"
+                          delay={{ show: 250, hide: 400 }}
+                          overlay={renderTooltip}
+                        >
+                          <div className="circleNo"></div>
+                        </OverlayTrigger>
+                        1
                       </label>
                     </div>
                   </td>
@@ -1255,6 +1322,9 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckOne"
+                        name="nr2"
+                        onChange={() => toggleCheck("nr2")}
+                        checked={checked["nr2"]}
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
@@ -1315,6 +1385,9 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckOne"
+                        name="nr3"
+                        onChange={() => toggleCheck("nr3")}
+                        checked={checked["nr3"]}
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
@@ -1375,6 +1448,9 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckOne"
+                        name="nr4"
+                        onChange={() => toggleCheck("nr4")}
+                        checked={checked["nr4"]}
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
@@ -1438,6 +1514,9 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckOne"
+                        name="nr5"
+                        onChange={() => toggleCheck("nr5")}
+                        checked={checked["nr5"]}
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
@@ -1501,6 +1580,9 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckOne"
+                        name="nr6"
+                        onChange={() => toggleCheck("nr6")}
+                        checked={checked["nr6"]}
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
@@ -1561,6 +1643,9 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckOne"
+                        name="nr7"
+                        onChange={() => toggleCheck("nr7")}
+                        checked={checked["nr7"]}
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
@@ -1621,6 +1706,9 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckOne"
+                        name="nr8"
+                        onChange={() => toggleCheck("nr8")}
+                        checked={checked["nr8"]}
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
@@ -1684,6 +1772,9 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckOne"
+                        name="nr9"
+                        onChange={() => toggleCheck("nr9")}
+                        checked={checked["nr9"]}
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
@@ -1744,6 +1835,9 @@ const TicketWindow = () => {
                         type="checkbox"
                         value=""
                         id="flexCheckOne"
+                        name="nr10"
+                        onChange={() => toggleCheck("nr10")}
+                        checked={checked["nr10"]}
                       />
                       <label
                         className="form-check-label d-flex align-items-center"

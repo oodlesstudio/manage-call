@@ -23,7 +23,6 @@ const AtmStatusWindow = () => {
             },
             value: {
               show: true,
-              fontSize: "14px",
               fontFamily: "Inter",
               fontWeight: 700,
               color: "#000000",
@@ -106,7 +105,7 @@ const AtmStatusWindow = () => {
               <div className="col-12 col-sm-4">
                 <div className="tableChartBox">
                   <div className="table-responsive tableContentBox atmDownTableBox w-100">
-                    <table className="table table-borderless align-middle mb-0">
+                    <table className="table atm-status-table atm-status-table table-borderless align-middle mb-0">
                       <thead>
                         <tr>
                           <th scope="col" colSpan="2">
@@ -147,7 +146,7 @@ const AtmStatusWindow = () => {
               <div className="col-12 col-sm-4">
                 <div className="tableChartBox">
                   <div className="table-responsive tableContentBox atmDownTableBox w-100">
-                    <table className="table table-borderless align-middle mb-0">
+                    <table className="table atm-status-table table-borderless align-middle mb-0">
                       <thead>
                         <tr>
                           <th scope="col" colSpan="2">
@@ -190,7 +189,7 @@ const AtmStatusWindow = () => {
               <div className="col-12 col-sm-4">
                 <div className="tableChartBox">
                   <div className="table-responsive tableContentBox atmDownTableBox w-100">
-                    <table className="table table-borderless align-middle mb-0">
+                    <table className="table atm-status-table table-borderless align-middle mb-0">
                       <thead>
                         <tr>
                           <th scope="col" colSpan="2">
@@ -233,7 +232,7 @@ const AtmStatusWindow = () => {
 
             {/* Table */}
             <div className="table-responsive tableContentBox atmDownTableBox onSiteBigTable">
-              <table className="table table-borderless align-middle mb-3">
+              <table className="table atm-status-table table-borderless atm-status-table align-middle mb-3">
                 <thead>
                   <tr>
                     <th scope="col"></th>
@@ -278,7 +277,7 @@ const AtmStatusWindow = () => {
               <div className="col-12 col-sm-4">
                 <div className="tableChartBox">
                   <div className="table-responsive tableContentBox atmDownTableBox w-100">
-                    <table className="table table-borderless align-middle mb-0">
+                    <table className="table atm-status-table table-borderless align-middle mb-0">
                       <thead>
                         <tr>
                           <th scope="col" colSpan="2">
@@ -319,7 +318,7 @@ const AtmStatusWindow = () => {
               <div className="col-12 col-sm-4">
                 <div className="tableChartBox">
                   <div className="table-responsive tableContentBox atmDownTableBox w-100">
-                    <table className="table table-borderless align-middle mb-0">
+                    <table className="table atm-status-table table-borderless align-middle mb-0">
                       <thead>
                         <tr>
                           <th scope="col" colSpan="2">
@@ -360,7 +359,7 @@ const AtmStatusWindow = () => {
               <div className="col-12 col-sm-4">
                 <div className="tableChartBox">
                   <div className="table-responsive tableContentBox atmDownTableBox w-100">
-                    <table className="table table-borderless align-middle mb-0">
+                    <table className="table atm-status-table table-borderless align-middle mb-0">
                       <thead>
                         <tr>
                           <th scope="col" colSpan="2">
@@ -401,7 +400,7 @@ const AtmStatusWindow = () => {
 
             {/* Table */}
             <div className="table-responsive tableContentBox atmDownTableBox onSiteBigTable">
-              <table className="table table-borderless align-middle mb-3">
+              <table className="table atm-status-table table-borderless align-middle mb-3">
                 <thead>
                   <tr>
                     <th scope="col"></th>
