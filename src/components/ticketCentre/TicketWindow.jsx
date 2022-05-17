@@ -140,9 +140,9 @@ const TicketWindow = () => {
               <path
                 d="M3 4L7 8L3 12"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="breadcrumbIcon"
               />
             </svg>
@@ -373,14 +373,14 @@ const TicketWindow = () => {
                       <path
                         d="M6 6L18 18"
                         stroke="#004BBD"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
                       />
                       <path
                         d="M18 6L6 18"
                         stroke="#004BBD"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
                       />
                     </svg>
                   </span>
@@ -1003,7 +1003,7 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label"
-                        for="flexCheckDefault"
+                        htmlFor="flexCheckDefault"
                       >
                         S. No.
                         <Link to="/">
@@ -1126,7 +1126,7 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
-                        for="flexCheckOne"
+                        htmlFor="flexCheckOne"
                       >
                         <OverlayTrigger
                           placement="top"
@@ -1195,7 +1195,7 @@ const TicketWindow = () => {
                 </tr>
                 <tr>
                   <td
-                    colspan="18"
+                    colSpan="18"
                     className={
                       toggleState === true ? "lightPinkNestedTable" : "d-none"
                     }
@@ -1328,7 +1328,7 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
-                        for="flexCheckOne"
+                        htmlFor="flexCheckOne"
                       >
                         <div className="circleNo circleNoTwo"></div>2
                       </label>
@@ -1391,7 +1391,7 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
-                        for="flexCheckOne"
+                        htmlFor="flexCheckOne"
                       >
                         <div className="circleNo circleNoThree"></div>3
                       </label>
@@ -1454,7 +1454,7 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
-                        for="flexCheckOne"
+                        htmlFor="flexCheckOne"
                       >
                         <div className="circleNo circleNoFour"></div>4
                       </label>
@@ -1520,7 +1520,7 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
-                        for="flexCheckOne"
+                        htmlFor="flexCheckOne"
                       >
                         <div className="circleNo circleNoFive"></div>5
                       </label>
@@ -1586,7 +1586,7 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
-                        for="flexCheckOne"
+                        htmlFor="flexCheckOne"
                       >
                         <div className="circleNo circleNoSix"></div>6
                       </label>
@@ -1649,7 +1649,7 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
-                        for="flexCheckOne"
+                        htmlFor="flexCheckOne"
                       >
                         <div className="circleNo circleNoSeven">!</div>7
                       </label>
@@ -1712,9 +1712,9 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
-                        for="flexCheckOne"
+                        htmlFor="flexCheckOne"
                       >
-                        <span class="icon-Vector mr-9"></span>8
+                        <span className="icon-Vector mr-9"></span>8
                       </label>
                     </div>
                   </td>
@@ -1778,9 +1778,9 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
-                        for="flexCheckOne"
+                        htmlFor="flexCheckOne"
                       >
-                        <span class="icon-Vector-1 mr-9"></span>9
+                        <span className="icon-Vector-1 mr-9"></span>9
                       </label>
                     </div>
                   </td>
@@ -1841,9 +1841,9 @@ const TicketWindow = () => {
                       />
                       <label
                         className="form-check-label d-flex align-items-center"
-                        for="flexCheckOne"
+                        htmlFor="flexCheckOne"
                       >
-                        <span class="icon-Vector-2 mr-9"></span>10
+                        <span className="icon-Vector-2 mr-9"></span>10
                       </label>
                     </div>
                   </td>
@@ -1912,7 +1912,7 @@ const TicketWindow = () => {
                       aria-label="Previous"
                     >
                       <span
-                        class="icon-Breadcrumb-Arrow"
+                        className="icon-Breadcrumb-Arrow"
                         style={{
                           fontSize: "16px",
                           transform: "rotate(180deg)",
@@ -1954,7 +1954,7 @@ const TicketWindow = () => {
                     >
                       <span>Last</span>
                       <span
-                        class="icon-Breadcrumb-Arrow"
+                        className="icon-Breadcrumb-Arrow"
                         style={{ fontSize: "16px" }}
                       ></span>
                     </Link>
@@ -1980,7 +1980,7 @@ const TicketWindow = () => {
             </Modal.Header>
             <Modal.Body className="text-center commentModalBody">
               <textarea
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlTextarea1"
                 placeholder="Enter your comment here..."
               ></textarea>

@@ -94,9 +94,9 @@ const NewTicketWindow = () => {
               <path
                 d="M3 4L7 8L3 12"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="breadcrumbIcon"
               />
             </svg>
@@ -526,8 +526,8 @@ const NewTicketWindow = () => {
                 >
                   <g opacity="0.9">
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M1.60737 2.54556C1.41083 2.61361 1.25884 2.72534 1.16028 2.87416C0.99528 3.12323 0.994239 3.13555 1.00278 4.74292L1.01056 8.20423L1.08228 8.35716C1.17345 8.55156 1.32027 8.69838 1.51467 8.78954C1.66078 8.85807 1.69166 8.86166 2.207 8.87014L2.74637 8.87904L2.75453 7.89827L2.76266 4.91753L2.83439 4.7646C2.92555 4.5702 3.07238 4.42338 3.26678 4.33221L3.4197 4.26049H8.0053H12.5909L12.7438 4.33221C12.9382 4.42338 13.085 4.5702 13.1762 4.7646L13.2479 4.91753L13.2561 7.89827L13.2642 8.87904L13.8036 8.87014C14.3189 8.86166 14.3498 8.85807 14.4959 8.78954C14.6903 8.69838 14.8371 8.55156 14.9283 8.35716L15 8.20423V4.68483V3.16542L14.9283 3.01249C14.8371 2.81809 14.6903 2.67127 14.4959 2.58011L14.343 2.50838L8.04636 2.5023C2.04334 2.49652 1.7431 2.49852 1.60737 2.54556ZM3.88374 5.16121C3.77346 5.20944 3.65843 5.34931 3.63883 5.45901C3.63015 5.50752 3.62659 7.75457 3.63089 10.4525L3.63872 15.3577L3.69517 15.4333C3.72621 15.4749 3.78562 15.5343 3.82721 15.5654C3.90279 15.6218 3.90452 15.6218 8.0053 15.6218C12.1061 15.6218 12.1078 15.6218 12.1834 15.5654C12.225 15.5343 12.2844 15.4749 12.3154 15.4333L12.3719 15.3577V10.3792V5.40064L12.3154 5.32503C12.2844 5.28344 12.225 5.22404 12.1834 5.19299C12.1079 5.13662 12.1012 5.13654 8.03752 5.13063C4.6954 5.12575 3.95229 5.13123 3.88374 5.16121Z"
                       fill="#003087"
                     />
@@ -878,11 +878,10 @@ const NewTicketWindow = () => {
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
-                    checked
                   />
                   <label
                     className="form-check-label w-100 text-nowrap"
-                    for="flexRadioDefault1"
+                    htmlFor="flexRadioDefault1"
                   >
                     ETA Received
                   </label>
@@ -896,7 +895,7 @@ const NewTicketWindow = () => {
                   />
                   <label
                     className="form-check-label w-100 text-nowrap"
-                    for="flexRadioDefault2"
+                    htmlFor="flexRadioDefault2"
                   >
                     ETA Not Received
                   </label>
@@ -1202,7 +1201,7 @@ const NewTicketWindow = () => {
           show={dispatchHistory}
           onHide={() => setDispatchHistory(!dispatchHistory)}
           centered
-          className="defaultThemeModal dispatchHistoryModal unmatchedTableModal "
+          className="defaultThemeModal dispatchHistoryModal   "
           id="dispatchHistoryModal"
         >
           <Modal.Header closeButton>

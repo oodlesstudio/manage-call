@@ -71,9 +71,9 @@ const AgegingWindow = () => {
                   <path
                     d="M3 4L7 8L3 12"
                     stroke="black"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="breadcrumbIcon"
                   />
                 </svg>
@@ -131,7 +131,7 @@ const AgegingWindow = () => {
                 <table className="table table-striped table-hover table-borderless align-middle queueWiseTableResponsive">
                   <thead>
                     <tr>
-                      <th scope="col" rowspan="2" className="ps-0">
+                      <th scope="col" rowSpan="2" className="ps-0">
                         Queue Type
                       </th>
                       <th scope="col">&#60;=24 Hrs</th>
@@ -1018,9 +1018,9 @@ const AgegingWindow = () => {
                   <path
                     d="M3 4L7 8L3 12"
                     stroke="black"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="breadcrumbIcon"
                   />
                 </svg>
@@ -1042,9 +1042,9 @@ const AgegingWindow = () => {
                   <path
                     d="M3 4L7 8L3 12"
                     stroke="black"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="breadcrumbIcon"
                   />
                 </svg>
@@ -1366,7 +1366,7 @@ const AgegingWindow = () => {
                     <tr>
                       <td>
                         <div className="d-flex align-items-center justify-content-center">
-                          <span class="icon-Vector mr-9"></span>8
+                          <span className="icon-Vector mr-9"></span>8
                         </div>
                       </td>
                       <td>8106034</td>
@@ -1384,7 +1384,7 @@ const AgegingWindow = () => {
                     <tr>
                       <td>
                         <div className="d-flex align-items-center justify-content-center">
-                          <span class="icon-Vector-1 mr-9"></span>9
+                          <span className="icon-Vector-1 mr-9"></span>9
                         </div>
                       </td>
                       <td>8106034</td>
@@ -1402,7 +1402,7 @@ const AgegingWindow = () => {
                     <tr>
                       <td>
                         <div className="d-flex align-items-center justify-content-center">
-                          <span class="icon-Vector-2 mr-9"></span>10
+                          <span className="icon-Vector-2 mr-9"></span>10
                         </div>
                       </td>
                       <td>8106034</td>
@@ -1437,7 +1437,7 @@ const AgegingWindow = () => {
                           aria-label="Previous"
                         >
                           <span
-                            class="icon-Breadcrumb-Arrow"
+                            className="icon-Breadcrumb-Arrow"
                             style={{
                               fontSize: "16px",
                               transform: "rotate(180deg)",
@@ -1479,7 +1479,7 @@ const AgegingWindow = () => {
                         >
                           <span>Last</span>
                           <span
-                            class="icon-Breadcrumb-Arrow"
+                            className="icon-Breadcrumb-Arrow"
                             style={{ fontSize: "16px" }}
                           ></span>
                         </Link>

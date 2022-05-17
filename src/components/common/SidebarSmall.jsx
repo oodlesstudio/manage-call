@@ -11,7 +11,7 @@ const dashboardPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Current Availability Status</span>
           </Link>
@@ -19,7 +19,7 @@ const dashboardPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Month Wise Dpwn Calls Status</span>
           </Link>
@@ -30,7 +30,7 @@ const dashboardPopover = (
             className={activeLink("/ageging-queue-wise")}
           >
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Ageging - Queue Wise</span>
           </Link>
@@ -38,7 +38,7 @@ const dashboardPopover = (
         <li>
           <Link to="/atm-status">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">ATM Status</span>
           </Link>
@@ -46,7 +46,7 @@ const dashboardPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">
               ATM Availability Trend Dashboard
@@ -56,7 +56,7 @@ const dashboardPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Availablity Status</span>
           </Link>
@@ -64,7 +64,7 @@ const dashboardPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">
               Current Monitoring Alert Dashboard
@@ -74,7 +74,7 @@ const dashboardPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">MTD Availability Phase Wise</span>
           </Link>
@@ -82,7 +82,7 @@ const dashboardPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Call Type Wise Monitor</span>
           </Link>
@@ -90,7 +90,7 @@ const dashboardPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">SLM Monitor</span>
           </Link>
@@ -98,7 +98,7 @@ const dashboardPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Open Calls Ageing Dashboard</span>
           </Link>
@@ -106,7 +106,7 @@ const dashboardPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">
               Machine Down Call Ageing Dashboard
@@ -125,7 +125,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Actual Downtime</span>
           </Link>
@@ -133,7 +133,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Uptime Report</span>
           </Link>
@@ -141,7 +141,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Uptime Report - LHO</span>
           </Link>
@@ -149,7 +149,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Availability(Peak/Non-Peak)</span>
           </Link>
@@ -157,7 +157,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Agent Dispatch Report</span>
           </Link>
@@ -165,7 +165,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Agent Comments Details</span>
           </Link>
@@ -173,7 +173,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Current Down ATMs Report</span>
           </Link>
@@ -181,7 +181,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">
               Sub category Wise Ageing Report
@@ -191,7 +191,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Exclusion Downtime</span>
           </Link>
@@ -199,7 +199,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Penalty Calculation</span>
           </Link>
@@ -207,7 +207,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Uptime Performance Report</span>
           </Link>
@@ -215,7 +215,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Export Ticket History Report</span>
           </Link>
@@ -223,7 +223,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">SMS Summary</span>
           </Link>
@@ -231,7 +231,7 @@ const reportsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">SMS Details</span>
           </Link>
@@ -248,7 +248,7 @@ const uploadsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Bulk Comments Update</span>
           </Link>
@@ -256,7 +256,7 @@ const uploadsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">BulkTicket Closure</span>
           </Link>
@@ -264,7 +264,7 @@ const uploadsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">
               Comment Followup and ETA Update
@@ -274,7 +274,7 @@ const uploadsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">
               Bulk Category & Delay Reason Change
@@ -284,7 +284,7 @@ const uploadsPopover = (
         <li>
           <Link to="/">
             <span className="subMenuLeft">
-              <span class="icon-Icon-2"></span>
+              <span className="icon-Icon-2"></span>
             </span>
             <span className="subMenuRight">Bulk Ticket Creation</span>
           </Link>
@@ -315,35 +315,35 @@ const SidebarSmall = (props) => {
           overlay={dashboardPopover}
           rootClose
         >
-          <span class="icon-Icon-21 sidebarIconSize"></span>
+          <span className="icon-Icon-21 sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
       {/* Ticket Centre */}
       <div className="sidebarSmallImg">
         <Link to="/" className={activeLink("/")}>
-          <span class="icon-Ticket-Centre sidebarIconSize"></span>
+          <span className="icon-Ticket-Centre sidebarIconSize"></span>
         </Link>
       </div>
 
       {/* New Ticket */}
       <div className="sidebarSmallImg">
         <Link to="/new-ticket" className={activeLink("/new-ticket")}>
-          <span class="icon-New-Ticket sidebarIconSize"></span>
+          <span className="icon-New-Ticket sidebarIconSize"></span>
         </Link>
       </div>
 
       {/* Ticket History */}
       <div className="sidebarSmallImg">
         <Link to="/ticket-history" className={activeLink("/ticket-history")}>
-          <span class="icon-Ticket-History sidebarIconSize"></span>
+          <span className="icon-Ticket-History sidebarIconSize"></span>
         </Link>
       </div>
 
       {/* Terminal Status */}
       <div className="sidebarSmallImg">
         <Link to="/terminal-status" className={activeLink("/terminal-status")}>
-          <span class="icon-Terminal-Status sidebarIconSize"></span>
+          <span className="icon-Terminal-Status sidebarIconSize"></span>
         </Link>
       </div>
 
@@ -355,7 +355,7 @@ const SidebarSmall = (props) => {
           overlay={reportsPopover}
           rootClose
         >
-          <span class="icon-Reports sidebarIconSize"></span>
+          <span className="icon-Reports sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -367,7 +367,7 @@ const SidebarSmall = (props) => {
           overlay={uploadsPopover}
           rootClose
         >
-          <span class="icon-Uploads sidebarIconSize"></span>
+          <span className="icon-Uploads sidebarIconSize"></span>
         </OverlayTrigger>
       </div>
 
@@ -377,14 +377,14 @@ const SidebarSmall = (props) => {
           to="/housekeeping-activity"
           className={activeLink("/housekeeping-activity")}
         >
-          <span class="icon-Housekeeping-Activity sidebarIconSize"></span>
+          <span className="icon-Housekeeping-Activity sidebarIconSize"></span>
         </Link>
       </div>
 
       {/* Manual */}
       <div className="sidebarSmallImg">
         <Link to="/manual" className={activeLink("/manual")}>
-          <span class="icon-Manual sidebarIconSize"></span>
+          <span className="icon-Manual sidebarIconSize"></span>
         </Link>
       </div>
 

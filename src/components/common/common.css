@@ -340,7 +340,7 @@
   right: -12px;
   top: 40vh;
   transform: translateY(-50%);
-  z-index: 999;
+  z-index: 9;
 }
 
 .sidebarHeading {
@@ -583,4 +583,11 @@
   background-color: var(--footer-bg);
 }
 
+
+/* ---- Center Modal ---- */
+
+.centeredModal .modal-dialog-centered {
+  margin: 0 auto;
+  justify-content: center;
+}
 

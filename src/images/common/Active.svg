@@ -54,7 +54,7 @@
 <g filter="url(#filter0_d_3407_86433)">
 <rect x="86" y="68" width="65" height="65" rx="32.5" fill="white"/>
 <rect x="90" y="72" width="60" height="60" fill="url(#pattern0)"/>
-<rect x="85" y="67" width="67" height="67" rx="33.5" stroke="#E05433" stroke-width="2"/>
+<rect x="85" y="67" width="67" height="67" rx="33.5" stroke="#E05433" strokeWidth="2"/>
 </g>
 <defs>
 <filter id="filter0_d_3407_86433" x="77" y="65" width="77" height="77" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

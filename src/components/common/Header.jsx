@@ -142,7 +142,7 @@ const Header = () => {
       <div className="headerLeft d-flex justify-content-between align-items-center">
         <div className="d-flex align-items-center">
           <button className="headerHamburger" onClick={handleShow}>
-          <span class="icon-Hamburger"></span>
+            <span className="icon-Hamburger"></span>
           </button>
           <OverlayTrigger
             placement="bottom"
@@ -167,7 +167,7 @@ const Header = () => {
       <div className="headerRight d-flex justify-content-end align-items-center">
         <div className="d-flex align-items-center">
           {/* Search */}
-          <span class="icon-Search me-3 sidebarIconSize"></span>
+          <span className="icon-Search me-3 sidebarIconSize"></span>
 
           {/* Settings */}
           <OverlayTrigger
@@ -177,22 +177,22 @@ const Header = () => {
             rootClose={true}
           >
             <button type="button" className="me-3">
-              <span class="icon-ant-design_setting-outlined sidebarIconSize"></span>
+              <span className="icon-ant-design_setting-outlined sidebarIconSize"></span>
             </button>
           </OverlayTrigger>
 
           {/* Notifications */}
           <button type="button" className="position-relative me-3">
-            <span class="icon-ion_notifications-outline sidebarIconSize"></span>
-            <span class="position-absolute top-0 start-100 translate-middle notificationCount">
+            <span className="icon-ion_notifications-outline sidebarIconSize"></span>
+            <span className="position-absolute top-0 start-100 translate-middle notificationCount">
               10
-              <span class="visually-hidden">unread messages</span>
+              <span className="visually-hidden">unread messages</span>
             </span>
           </button>
 
           <div className="d-flex align-items-center">
             {/* People */}
-            <span class="icon-fluent_person-16-regular sidebarIconSize"></span>
+            <span className="icon-fluent_person-16-regular sidebarIconSize"></span>
 
             <div className="headerMyAccount">
               <p className="fontSize14-m colorPrimaryDefault">Sanjay_AD</p>
@@ -309,7 +309,7 @@ const Header = () => {
           <Modal
             show={openDarkModal}
             onHide={() => setOpenDarkModal(!openDarkModal)}
-            className="defaultThemeModal"
+            className="defaultThemeModal centeredModal "
             centered
           >
             <Modal.Header closeButton>

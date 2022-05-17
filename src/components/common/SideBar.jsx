@@ -48,7 +48,7 @@ const SideBar = (props) => {
               aria-expanded={activeAriaExpand("/ageging-queue-wise")}
               aria-controls="collapseTwo"
             >
-              <span class="icon-Icon-21 sidebarIconSize"></span>
+              <span className="icon-Icon-21 sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Dashboard</span>
             </button>
           </h2>
@@ -63,7 +63,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Current Availability Status
@@ -73,7 +73,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Month Wise Dpwn Calls Status
@@ -86,7 +86,7 @@ const SideBar = (props) => {
                     className={activeLink("/ageging-queue-wise")}
                   >
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Ageging - Queue Wise</span>
                   </Link>
@@ -94,7 +94,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/atm-status">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">ATM Status</span>
                   </Link>
@@ -102,7 +102,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       ATM Availability Trend Dashboard
@@ -112,7 +112,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Availablity Status</span>
                   </Link>
@@ -120,7 +120,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Current Monitoring Alert Dashboard
@@ -130,7 +130,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       MTD Availability Phase Wise
@@ -140,7 +140,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Call Type Wise Monitor</span>
                   </Link>
@@ -148,7 +148,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">SLM Monitor</span>
                   </Link>
@@ -156,7 +156,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Open Calls Ageing Dashboard
@@ -166,7 +166,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Machine Down Call Ageing Dashboard
@@ -183,7 +183,7 @@ const SideBar = (props) => {
           <h2 className="accordion-header hideArrowIcon" id="headingHome">
             <Link to="/" className={activeLink("/")}>
               <button className="accordion-button collapsed" type="button">
-                <span class="icon-Ticket-Centre sidebarIconSize"></span>
+                <span className="icon-Ticket-Centre sidebarIconSize"></span>
                 <span className="fontSize14 ms-2">Ticket Centre</span>
               </button>
             </Link>
@@ -195,7 +195,7 @@ const SideBar = (props) => {
           <h2 className="accordion-header hideArrowIcon" id="headingHome">
             <Link to="/new-ticket" className={activeLink("/new-ticket")}>
               <button className="accordion-button collapsed" type="button">
-                <span class="icon-New-Ticket sidebarIconSize"></span>
+                <span className="icon-New-Ticket sidebarIconSize"></span>
                 <span className="fontSize14 ms-2">New Ticket</span>
               </button>
             </Link>
@@ -206,7 +206,7 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header hideArrowIcon" id="headingHome">
             <button className="accordion-button collapsed" type="button">
-              <span class="icon-Ticket-History sidebarIconSize"></span>
+              <span className="icon-Ticket-History sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Ticket History</span>
             </button>
           </h2>
@@ -216,7 +216,7 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header hideArrowIcon" id="headingHome">
             <button className="accordion-button collapsed" type="button">
-              <span class="icon-Terminal-Status sidebarIconSize"></span>
+              <span className="icon-Terminal-Status sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Terminal Status</span>
             </button>
           </h2>
@@ -233,7 +233,7 @@ const SideBar = (props) => {
               aria-expanded={activeAriaExpand("/dummy-link")}
               aria-controls="collapseReports"
             >
-              <span class="icon-Reports sidebarIconSize"></span>
+              <span className="icon-Reports sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Reports</span>
             </button>
           </h2>
@@ -248,7 +248,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Actual Downtime</span>
                   </Link>
@@ -256,7 +256,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Uptime Report</span>
                   </Link>
@@ -264,7 +264,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Uptime Report - LHO</span>
                   </Link>
@@ -272,7 +272,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Availability(Peak/Non-Peak)
@@ -282,7 +282,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Agent Dispatch Report</span>
                   </Link>
@@ -290,7 +290,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Agent Comments Details</span>
                   </Link>
@@ -298,7 +298,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Current Down ATMs Report
@@ -308,7 +308,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Sub category Wise Ageing Report
@@ -318,7 +318,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Exclusion Downtime</span>
                   </Link>
@@ -326,7 +326,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Penalty Calculation</span>
                   </Link>
@@ -334,7 +334,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Uptime Performance Report
@@ -344,7 +344,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Export Ticket History Report
@@ -354,7 +354,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">SMS Summary</span>
                   </Link>
@@ -362,7 +362,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">SMS Details</span>
                   </Link>
@@ -383,7 +383,7 @@ const SideBar = (props) => {
               aria-expanded={activeAriaExpand("/dummy-text")}
               aria-controls="collapseUploads"
             >
-              <span class="icon-Uploads sidebarIconSize"></span>
+              <span className="icon-Uploads sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Uploads</span>
             </button>
           </h2>
@@ -398,7 +398,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Bulk Comments Update</span>
                   </Link>
@@ -406,7 +406,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">BulkTicket Closure</span>
                   </Link>
@@ -414,7 +414,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Comment Followup and ETA Update
@@ -424,7 +424,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">
                       Bulk Category & Delay Reason Change
@@ -434,7 +434,7 @@ const SideBar = (props) => {
                 <li>
                   <Link to="/">
                     <span className="subMenuLeft">
-                      <span class="icon-Icon-2"></span>
+                      <span className="icon-Icon-2"></span>
                     </span>
                     <span className="subMenuRight">Bulk Ticket Creation</span>
                   </Link>
@@ -448,7 +448,7 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header hideArrowIcon" id="headingHome">
             <button className="accordion-button collapsed" type="button">
-              <span class="icon-Housekeeping-Activity sidebarIconSize"></span>
+              <span className="icon-Housekeeping-Activity sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Housekeeping Activity</span>
             </button>
           </h2>
@@ -458,7 +458,7 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header hideArrowIcon" id="headingHome">
             <button className="accordion-button collapsed" type="button">
-              <span class="icon-Manual sidebarIconSize"></span>
+              <span className="icon-Manual sidebarIconSize"></span>
               <span className="fontSize14 ms-2">Manual</span>
             </button>
           </h2>

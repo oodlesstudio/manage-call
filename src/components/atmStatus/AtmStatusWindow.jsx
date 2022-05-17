@@ -68,9 +68,9 @@ const AtmStatusWindow = () => {
               <path
                 d="M3 4L7 8L3 12"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="breadcrumbIcon"
               />
             </svg>

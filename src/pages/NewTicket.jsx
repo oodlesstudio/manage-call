@@ -120,7 +120,7 @@ const NewTicket = () => {
               className="inputTextBox mb-2"
             />
             <textarea
-              class="form-control"
+              className="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
               placeholder="Enter your feedback here..."
@@ -132,7 +132,10 @@ const NewTicket = () => {
                 value=""
                 id="localShopAddress"
               />
-              <label className="form-check-label mb-0" for="localShopAddress">
+              <label
+                className="form-check-label mb-0"
+                htmlFor="localShopAddress"
+              >
                 Feedback given
               </label>
             </div>
@@ -187,8 +190,8 @@ const NewTicket = () => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M9.25 4.66667C9.25 4.02208 9.72017 3.5 10.3 3.5H23.95C24.5298 3.5 25 4.02208 25 4.66667V23.3333C25 23.9779 24.5298 24.5 23.95 24.5H10.3C9.72017 24.5 9.25 23.9779 9.25 23.3333V19.8333H5.05C4.47017 19.8333 4 19.3112 4 18.6667V9.33333C4 8.68875 4.47017 8.16667 5.05 8.16667H9.25V4.66667ZM16.8333 8.16667V4.66667H10.4167V8.16667H16.8333ZM18 4.66667V8.16667H23.8333V4.66667H18ZM16.8333 9.33333H14.5V13.4167H16.8333V9.33333ZM18 13.4167V9.33333H23.8333V13.4167H18ZM16.8333 14.5833H14.5V18.6667H16.8333V14.5833ZM18 18.6667V14.5833H23.8333V18.6667H18ZM16.8333 19.8333H10.4167V23.3333H16.8333V19.8333ZM18 23.3333V19.8333H23.8333V23.3333H18ZM13.3333 9.33333V18.6667H5.05V9.33333H13.3333ZM7.0485 11.0833H8.30092L9.31767 13.2732L10.3916 11.0833H11.5617L9.95 14L11.5991 16.9167H10.3642L9.25642 14.6242L8.15392 16.9167H6.90092L8.57742 13.9895L7.0485 11.0833Z"
                       fill="#5C5C5C"
                     />
@@ -226,14 +229,14 @@ const NewTicket = () => {
                       <path
                         d="M4 4L12 12"
                         stroke="black"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
                       />
                       <path
                         d="M12 4L4 12"
                         stroke="black"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
                       />
                     </svg>
                   </span>
@@ -248,31 +251,31 @@ const NewTicket = () => {
                     <th scope="col">
                       S. No.
                       <Link to="/">
-                        <span class="icon-Sort-icon"></span>
+                        <span className="icon-Sort-icon"></span>
                       </Link>
                     </th>
                     <th scope="col">
                       Ticket ID
                       <Link to="/">
-                        <span class="icon-Sort-icon"></span>
+                        <span className="icon-Sort-icon"></span>
                       </Link>
                     </th>
                     <th scope="col">
                       File Name
                       <Link to="/">
-                        <span class="icon-Sort-icon"></span>
+                        <span className="icon-Sort-icon"></span>
                       </Link>
                     </th>
                     <th scope="col">
                       Uploaded On
                       <Link to="/">
-                        <span class="icon-Sort-icon"></span>
+                        <span className="icon-Sort-icon"></span>
                       </Link>
                     </th>
                     <th scope="col">
                       Uploaded By
                       <Link to="/">
-                        <span class="icon-Sort-icon"></span>
+                        <span className="icon-Sort-icon"></span>
                       </Link>
                     </th>
                   </tr>
