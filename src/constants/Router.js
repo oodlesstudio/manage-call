@@ -11,9 +11,9 @@ const router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<TicketCentre />} />
-        <Route path="/ageging-queue-wise" element={<AgegingQueueWise />} />
+        <Route path="/dashboard/ageging-queue-wise" element={<AgegingQueueWise />} />
         <Route path="/new-ticket" element={<NewTicket />} />
-        <Route path="/atm-status" element={<AtmStatus />} />
+        <Route path="/dashboard/atm-status" element={<AtmStatus />} />
       </Routes>
     </BrowserRouter>
   );

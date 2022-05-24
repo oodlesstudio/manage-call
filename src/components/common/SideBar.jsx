@@ -1,8 +1,15 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, matchPath } from "react-router-dom";
 
 const SideBar = (props) => {
-  const path = useLocation().pathname;
+  let path = useLocation().pathname;
+
+  // Card Operation Path
+  let dashboardPath = matchPath("/dashboard/*", path);
+  if (dashboardPath) {
+    dashboardPath = dashboardPath.pathnameBase;
+    console.log(dashboardPath);
+  }
 
   const activeLink = (arr) => {
     if (arr === path) {
@@ -15,6 +22,9 @@ const SideBar = (props) => {
   const activeBtnClass = (arr) => {
     if (arr === path) {
       return "accordion-button";
+    }
+    if (arr === dashboardPath) {
+      return "accordion-button";
     } else {
       return "accordion-button collapsed";
     }
@@ -22,12 +32,18 @@ const SideBar = (props) => {
   const activeAriaExpand = (arr = []) => {
     if (arr === path) {
       return "true";
+    }
+    if (arr === dashboardPath) {
+      return "true";
     } else {
       return "false";
     }
   };
   const activeAccordionBodyClass = (arr) => {
     if (arr === path) {
+      return "accordion-collapse collapse show";
+    }
+    if (arr === dashboardPath) {
       return "accordion-collapse collapse show";
     } else {
       return "accordion-collapse collapse ";
@@ -41,11 +57,11 @@ const SideBar = (props) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingTwo">
             <button
-              className={activeBtnClass("/ageging-queue-wise")}
+              className={activeBtnClass("/dashboard")}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
-              aria-expanded={activeAriaExpand("/ageging-queue-wise")}
+              aria-expanded={activeAriaExpand("/dashboard")}
               aria-controls="collapseTwo"
             >
               <span className="icon-Icon-21 sidebarIconSize"></span>
@@ -54,7 +70,7 @@ const SideBar = (props) => {
           </h2>
           <div
             id="collapseTwo"
-            className={activeAccordionBodyClass("/ageging-queue-wise")}
+            className={activeAccordionBodyClass("/dashboard")}
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
@@ -82,8 +98,8 @@ const SideBar = (props) => {
                 </li>
                 <li>
                   <Link
-                    to="/ageging-queue-wise"
-                    className={activeLink("/ageging-queue-wise")}
+                    to="/dashboard/ageging-queue-wise"
+                    className={activeLink("/dashboard/ageging-queue-wise")}
                   >
                     <span className="subMenuLeft">
                       <span className="icon-Icon-2"></span>
@@ -92,7 +108,10 @@ const SideBar = (props) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/atm-status">
+                  <Link
+                    to="/dashboard/atm-status"
+                    className={activeLink("/dashboard/atm-status")}
+                  >
                     <span className="subMenuLeft">
                       <span className="icon-Icon-2"></span>
                     </span>

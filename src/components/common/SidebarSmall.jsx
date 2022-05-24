@@ -1,309 +1,314 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, matchPath } from "react-router-dom";
 import { Popover, OverlayTrigger } from "react-bootstrap";
-
-const activeLink = (arr) => {};
-
-const dashboardPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Current Availability Status</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Month Wise Dpwn Calls Status</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/ageging-queue-wise"
-            className={activeLink("/ageging-queue-wise")}
-          >
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Ageging - Queue Wise</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/atm-status">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">ATM Status</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">
-              ATM Availability Trend Dashboard
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Availablity Status</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">
-              Current Monitoring Alert Dashboard
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">MTD Availability Phase Wise</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Call Type Wise Monitor</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">SLM Monitor</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Open Calls Ageing Dashboard</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">
-              Machine Down Call Ageing Dashboard
-            </span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-
-const reportsPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Actual Downtime</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Uptime Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Uptime Report - LHO</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Availability(Peak/Non-Peak)</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Agent Dispatch Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Agent Comments Details</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Current Down ATMs Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">
-              Sub category Wise Ageing Report
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Exclusion Downtime</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Penalty Calculation</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Uptime Performance Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Export Ticket History Report</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">SMS Summary</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">SMS Details</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
-
-const uploadsPopover = (
-  <Popover id="popover-basic" className="sidebarPopover">
-    <Popover.Body>
-      <ul className="subMenu">
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Bulk Comments Update</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">BulkTicket Closure</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">
-              Comment Followup and ETA Update
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">
-              Bulk Category & Delay Reason Change
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <span className="subMenuLeft">
-              <span className="icon-Icon-2"></span>
-            </span>
-            <span className="subMenuRight">Bulk Ticket Creation</span>
-          </Link>
-        </li>
-      </ul>
-    </Popover.Body>
-  </Popover>
-);
 
 const SidebarSmall = (props) => {
   const path = useLocation().pathname;
 
+  // Card Operation Path
+  let dashboardPath = matchPath("/dashboard/*", path);
+  if (dashboardPath) {
+    dashboardPath = dashboardPath.pathnameBase;
+    console.log(dashboardPath);
+  }
+
   const activeLink = (arr) => {
     if (arr === path) {
+      return "activeTab";
+    }
+    if (arr === dashboardPath) {
       return "activeTab";
     } else {
       return "";
     }
   };
+
+  const dashboardPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Current Availability Status</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Month Wise Dpwn Calls Status</span>
+            </Link>
+          </li>
+          <li className={activeLink("/dashboard/ageging-queue-wise")}>
+            <Link to="/dashboard/ageging-queue-wise">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Ageging - Queue Wise</span>
+            </Link>
+          </li>
+          <li className={activeLink("/dashboard/atm-status")}>
+            <Link to="/dashboard/atm-status">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">ATM Status</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">
+                ATM Availability Trend Dashboard
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Availablity Status</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">
+                Current Monitoring Alert Dashboard
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">MTD Availability Phase Wise</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Call Type Wise Monitor</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">SLM Monitor</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Open Calls Ageing Dashboard</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">
+                Machine Down Call Ageing Dashboard
+              </span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
+  const reportsPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Actual Downtime</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Uptime Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Uptime Report - LHO</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Availability(Peak/Non-Peak)</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Agent Dispatch Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Agent Comments Details</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Current Down ATMs Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">
+                Sub category Wise Ageing Report
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Exclusion Downtime</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Penalty Calculation</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Uptime Performance Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Export Ticket History Report</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">SMS Summary</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">SMS Details</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
+
+  const uploadsPopover = (
+    <Popover id="popover-basic" className="sidebarPopover">
+      <Popover.Body>
+        <ul className="subMenu">
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Bulk Comments Update</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">BulkTicket Closure</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">
+                Comment Followup and ETA Update
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">
+                Bulk Category & Delay Reason Change
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="subMenuLeft">
+                <span className="icon-Icon-2"></span>
+              </span>
+              <span className="subMenuRight">Bulk Ticket Creation</span>
+            </Link>
+          </li>
+        </ul>
+      </Popover.Body>
+    </Popover>
+  );
 
   return (
     <div className="sidebarSmall">
@@ -315,7 +320,9 @@ const SidebarSmall = (props) => {
           overlay={dashboardPopover}
           rootClose
         >
-          <span className="icon-Icon-21 sidebarIconSize"></span>
+          <div className={activeLink("/dashboard")}>
+            <span className="icon-Icon-21 sidebarIconSize"></span>
+          </div>
         </OverlayTrigger>
       </div>
 

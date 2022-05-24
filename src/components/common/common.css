@@ -595,3 +595,15 @@
   justify-content: center;
 }
 
+.sidebarPopover {
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  background-color: var(--background-white);
+  overflow: hidden;
+}
+
+.subMenu .activeTab {
+  background-color: var(--color-secondary-light-defaut);
+}
+
