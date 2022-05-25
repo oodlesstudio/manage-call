@@ -9,7 +9,6 @@ const SidebarSmall = (props) => {
   let dashboardPath = matchPath("/dashboard/*", path);
   if (dashboardPath) {
     dashboardPath = dashboardPath.pathnameBase;
-    console.log(dashboardPath);
   }
 
   const activeLink = (arr) => {
