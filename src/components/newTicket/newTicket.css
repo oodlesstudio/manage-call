@@ -754,14 +754,17 @@
 
   .attachmentModal .modal-dialog {
     width: 343px;
+    margin: 0 auto;
   }
 
   .feedbackRequestModal .modal-dialog {
     width: 343px;
+    margin: 0 auto;
   }
 
   .dispatchHistoryModal .modal-dialog {
     width: 343px;
+    margin: 0 auto;
   }
 
   .CRA-Carousal .CRA-Swiper {

@@ -85,7 +85,7 @@ const NewTicketWindow = () => {
           <span>
             <svg
               width="8"
-              height="auto"
+              height="100%"
               viewBox="0 0 10 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +198,7 @@ const NewTicketWindow = () => {
             show={atmActive}
             onHide={() => setAtmActive(!atmActive)}
             centered
-            className="defaultThemeModal saveFiltersModal errorFiltersModal atmActiveModal"
+            className="defaultThemeModal saveFiltersModal mobile-defaultThemeModal errorFiltersModal atmActiveModal centeredModal"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -220,7 +220,7 @@ const NewTicketWindow = () => {
             show={atmInactive}
             onHide={() => setAtmInactive(!atmInactive)}
             centered
-            className="defaultThemeModal saveFiltersModal atmActiveModal"
+            className="defaultThemeModal saveFiltersModal mobile-defaultThemeModal atmActiveModal centeredModal"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -490,7 +490,7 @@ const NewTicketWindow = () => {
               <div className="d-flex align-items-center">
                 <svg
                   width="12"
-                  height="auto"
+                  height="100%"
                   viewBox="0 0 16 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -519,7 +519,7 @@ const NewTicketWindow = () => {
               <div className="d-flex justify-content-sm-end justify-content-start align-items-center">
                 <svg
                   width="12"
-                  height="auto"
+                  height="100%"
                   viewBox="0 0 16 17"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1169,7 +1169,7 @@ const NewTicketWindow = () => {
           show={editModal}
           onHide={() => setEditModal(!editModal)}
           centered
-          className="defaultThemeModal saveFiltersModal errorFiltersModal modalDialogCenteredFix"
+          className="defaultThemeModal saveFiltersModal centeredModal errorFiltersModal modalDialogCenteredFix"
         >
           <Modal.Header closeButton>
             <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -1201,7 +1201,7 @@ const NewTicketWindow = () => {
           show={dispatchHistory}
           onHide={() => setDispatchHistory(!dispatchHistory)}
           centered
-          className="defaultThemeModal dispatchHistoryModal   "
+          className="defaultThemeModal dispatchHistoryModal centeredModal  "
           id="dispatchHistoryModal"
         >
           <Modal.Header closeButton>
