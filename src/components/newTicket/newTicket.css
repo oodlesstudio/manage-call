@@ -367,7 +367,7 @@
 
 .atmSlideBox {
   background: var(--color-light-blue);
-  border-radius: 8px;
+  border-radius: 4px;
   position: relative;
 }
 
@@ -709,12 +709,12 @@
   }
 
     .dispatchHistoryModal .tableBorderBox .table {
-      width: 1000px !important;
+      width: 805px !important;
     }
   
 
   .attachmentModal .modal-dialog {
-    width: 700px;
+        width: calc(100% - 30px);
   }
 
   .atmTicketStatus {
@@ -747,23 +747,23 @@
 
 }
 
-@media(max-width: 375px) {
+@media(max-width: 425px) {
   .tab-table {
     width: 1000px !important;
   }
 
   .attachmentModal .modal-dialog {
-    width: 343px;
+    width: calc(100% - 30px);
     margin: 0 auto;
   }
 
   .feedbackRequestModal .modal-dialog {
-    width: 343px;
+    width: calc(100% - 30px);
     margin: 0 auto;
   }
 
   .dispatchHistoryModal .modal-dialog {
-    width: 343px;
+    width: calc(100% - 30px);
     margin: 0 auto;
   }
 

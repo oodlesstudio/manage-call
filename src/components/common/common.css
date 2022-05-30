@@ -607,10 +607,30 @@
   background-color: var(--color-secondary-light-defaut);
 }
 
+/* Mobile Default Modal */
+
 @media (max-width: 425px) {
 
   .defaultThemeModal.mobile-defaultThemeModal .modal-content {
-    width: 350px;
+    width: calc(100% - 28px) !important;
+  }
+
+  .siteConfigurationModal.siteConfigurationMobileModal .modal-body {
+    padding: 24px 12px 16px;
+
+  }
+
+  .siteConfigurationModal.siteConfigurationMobileModal .modal-footer {
+    padding: 0 12px;
+
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .defaultThemeModal.mobile-defaultThemeModal .modal-content {
+    width: calc(100% - 28px) !important;
   }
 
   .siteConfigurationModal.siteConfigurationMobileModal .modal-body {
@@ -623,4 +643,3 @@
 
   }
 }
-

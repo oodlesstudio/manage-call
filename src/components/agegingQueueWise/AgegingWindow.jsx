@@ -99,8 +99,8 @@ const AgegingWindow = () => {
           {/* Bottom Content */}
           <div className="configLeftBottom ticketCentreTableHeader">
             <div className="tableBorderBox">
-              <div className="d-flex justify-content-between align-items-center mt-3 mb-2">
-                <div className="clientNameSelect d-flex">
+              <div className="atm-downHeader">
+                <div className="clientNameSelect d-flex atmDown-dateBox">
                   <DatePicker
                     selected={startDate}
                     onChange={(date) => setStartDate(date)}
@@ -109,10 +109,10 @@ const AgegingWindow = () => {
                   <DatePicker
                     selected={startDate}
                     onChange={(date) => setStartDate(date)}
-                    className="unmatchedDate ms-2 atmDownCalendar"
+                    className="unmatchedDate  atmDownCalendar"
                   />
                 </div>
-                <div className="d-flex">
+                <div className="atm-searchBox">
                   <div className="form-group has-search">
                     <span className="icon-Search form-control-feedback"></span>
                     <input

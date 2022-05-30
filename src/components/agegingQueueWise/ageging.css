@@ -92,3 +92,61 @@
     width: 1000px !important;
   }
 }
+
+
+.atm-downHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.atm-searchBox{
+  display: flex;
+}
+
+.atmDown-dateBox{
+  gap: 6px;
+}
+
+
+@media(max-width:425px){
+      .atm-searchBox .has-search .form-control {
+          width: 100%;
+          margin-left: 0px;
+        }
+                .atm-downHeader {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin-top: 12px;
+                  margin-bottom: 6px;
+                  gap: 6px;
+                }
+}
+
+
+@media(max-width: 374px){
+.atm-downHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+
+    .atm-searchBox {
+      display:block;
+      width: 100%;
+    }
+    .atm-searchBox .has-search .form-control {
+      width: 100%;
+      margin-top: 6px;
+      margin-left: 0px;
+    }
+    
+    .atmDownCalendar{
+      width: 100%;
+    }
+}

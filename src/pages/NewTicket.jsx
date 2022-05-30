@@ -104,7 +104,7 @@ const NewTicket = () => {
           show={feedbackRequest}
           onHide={() => setFeedbackRequest(!feedbackRequest)}
           centered
-          className="defaultThemeModal saveFiltersModal errorFiltersModal feedbackRequestModal"
+          className="defaultThemeModal saveFiltersModal errorFiltersModal centeredModal feedbackRequestModal"
         >
           <Modal.Header closeButton>
             <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -161,7 +161,7 @@ const NewTicket = () => {
           show={attachment}
           onHide={() => setAttachment(!attachment)}
           centered
-          className="defaultThemeModal attachmentModal unmatchedTableModal"
+          className="defaultThemeModal attachmentModal centeredModal unmatchedTableModal"
           id="attachmentModal"
         >
           <Modal.Header closeButton>

@@ -333,6 +333,12 @@
     padding: 0 6px;
     width: 100%;
   }
+  /* .configLeft .btnsBtm .btnPrimary,
+  .configLeft .btnsBtm .btnPrimaryOutline {
+    width: calc(50% - 4px);
+  } */
+}
+@media (max-width: 425px) {
   .configLeft .btnsBtm .btnPrimary,
   .configLeft .btnsBtm .btnPrimaryOutline {
     width: calc(50% - 4px);
