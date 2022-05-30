@@ -743,7 +743,7 @@ const TicketWindow = () => {
             show={resetFilters}
             onHide={() => setResetFilters(!resetFilters)}
             centered
-            className="defaultThemeModal saveFiltersModal errorFiltersModal modalDialogCenteredFix"
+            className="defaultThemeModal mobile-defaultThemeModal saveFiltersModal errorFiltersModal centeredModal"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -765,7 +765,7 @@ const TicketWindow = () => {
             show={saveFilters}
             onHide={() => setSaveFilters(!saveFilters)}
             centered
-            className="defaultThemeModal saveFiltersModal modalDialogCenteredFix"
+            className="defaultThemeModal saveFiltersModal mobile-defaultThemeModal centeredModal"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
@@ -1971,7 +1971,7 @@ const TicketWindow = () => {
             show={editModal}
             onHide={() => setEditModal(!editModal)}
             centered
-            className="defaultThemeModal saveFiltersModal errorFiltersModal modalDialogCenteredFix"
+            className="defaultThemeModal saveFiltersModal errorFiltersModal centeredModal"
           >
             <Modal.Header closeButton>
               <Modal.Title className="fontSize16-sm letterSpacing-2">
