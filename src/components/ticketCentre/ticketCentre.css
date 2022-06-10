@@ -288,3 +288,9 @@
 .modalDialogCenteredFix .modal-dialog{
   max-width: 400px !important;
 }
+
+
+/* new All filters */
+.newFilters{
+  margin-top: 12px;
+}
