@@ -24,7 +24,36 @@ const TicketWindow = () => {
   const [saveFilters, setSaveFilters] = useState(false);
   const [editModal, setEditModal] = useState(false);
 
-  const [showFilters, setShowFilters] = useState(false);
+  // all Fiilters State
+
+  const [show, setShow] = useState(true);
+  const [allfilters, setAllFilters] = useState(false);
+  const [extrafilter, setExtraFilter] = useState(false);
+
+  // filters State
+  function filterState(show, filter, extrafilter) {
+    if ((show || filter) === true) {
+      return "";
+    } else {
+      return "d-none";
+    }
+  }
+
+  // show State
+  function allFilterView() {
+    setExtraFilter(!extrafilter);
+    setAllFilters(!allfilters);
+  }
+
+  // Show Hide
+
+  function showHideView() {
+    setShow(!show);
+    if (extrafilter === true) {
+      setExtraFilter(false);
+      setAllFilters(!allfilters);
+    }
+  }
 
   // Select Error
   const [clientName, setClientName] = useState(false);
@@ -165,610 +194,485 @@ const TicketWindow = () => {
         ></button>
       </div>
 
-      {/* Search Criteria */}
+      {/* New Search Criteria */}
 
-      {/* filters */}
-      <div className="accordion" id="unmatchedFilters">
-        <div className="accordion-item position-relative">
-          <div
-            className="d-flex justify-content-between align-items-center configLeftFilters accordion-header"
-            id="unmatchedFiltersHeading1"
-          >
-            <h6 className="fontWeight-600 colorBlack">Search Criteria</h6>
-            <div className="d-flex">
-              <button
-                className="allFiltersBtn btn p-0 d-flex justify-content-center align-items-center"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#unmatchedFiltersCollapse1"
-                aria-expanded="true"
-                aria-controls="unmatchedFiltersCollapse1"
-              >
-                <span className="icon-Hide"></span>
-                <span className="ms-1 fontSize12-m colorPrimaryDefault">
-                  Show / Hide
-                </span>
-              </button>
-              <button
-                type="button"
-                className="allFiltersBtn btn p-0 d-flex justify-content-center align-items-center ms-2"
-                onClick={() => setShowFilters(true)}
-              >
-                <span className="icon-Filter-Icon"></span>
-                <span className="ms-1 fontSize12-m colorPrimaryDefault">
-                  All Filters
-                </span>
-              </button>
+      <div className="newSearchBox">
+        <section className="newSearchHeader">
+          <h6 className="fontWeight-600 colorBlack">Search Criteria</h6>
+          <div className="newSeachHeaderBtns">
+            <button
+              className="allFiltersBtn btn p-0 d-flex justify-content-center align-items-center"
+              onClick={() => allFilterView()}
+            >
+              <span className="icon-Filter-Icon"></span>
+              <span className="ms-1 fontSize12-m colorPrimaryDefault">
+                All Filters
+              </span>
+            </button>
+            <button
+              className="allFiltersBtn btn p-0 d-flex justify-content-center align-items-center"
+              onClick={() => showHideView()}
+            >
+              <span className="icon-Hide"></span>
+              <span className="ms-1 fontSize12-m colorPrimaryDefault">
+                Show / Hide
+              </span>
+            </button>
+          </div>
+        </section>
+
+        {/* data to show */}
+        <div className={filterState(show, allfilters, extrafilter)}>
+          <div className="hrGreyLine"></div>
+          <div className="configSelectBoxTop row">
+            {/* 1 */}
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">Bank</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 2 */}
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">LOC Type</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 3 */}
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">Queue Type</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 4 */}
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">Status</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 5 */}
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">State</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 6 */}
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">Site Type</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 7 */}
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">Call Type</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 8 */}
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">ATM Status</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 9 */}
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">Make</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 10 */}
+            <div className="clientNameSelect col">
+              <label htmlFor="clientName">Site Class</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 11 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="clientName">Category</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 12 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="clientName">Assigned To</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 13 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="clientName">CRA</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 14 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="clientName">Criticality</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 15 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="clientName">Sub Category</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 16 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="channelType">Call Date</label>
+              <DatePicker
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                className="unmatchedDate"
+              />
+            </div>
+            {/* 17 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="clientName">Worklist</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 18 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="clientName">Ticket</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 19 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="clientName">CRA Visits</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 20 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="clientName">Sites</label>
+              <Select
+                defaultValue={clientName}
+                onChange={() => {
+                  setClientName();
+                  changeClientName();
+                }}
+                options={options}
+                id="clientName"
+                classNamePrefix="reactSelectBox"
+                placeholder="All"
+              />
+            </div>
+            {/* 21 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="terminalCode">Enter Ticket ID</label>
+              <input
+                type="text"
+                name="terminalCode"
+                id="terminalCode"
+                placeholder="Ticket ID"
+                className="inputTextBox"
+              />
+            </div>
+            {/* 22 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="terminalCode">Enter ATM ID</label>
+              <input
+                type="text"
+                name="terminalCode"
+                id="terminalCode"
+                placeholder="ATM ID"
+                className="inputTextBox"
+              />
+            </div>
+            {/* 23 */}
+            <div
+              className={
+                extrafilter === true ? "clientNameSelect col" : "d-none"
+              }
+            >
+              <label htmlFor="terminalCode">Enter Site ID</label>
+              <input
+                type="text"
+                name="terminalCode"
+                id="terminalCode"
+                placeholder="Site ID"
+                className="inputTextBox"
+              />
             </div>
           </div>
-          <div
-            id="unmatchedFiltersCollapse1"
-            className="accordion-collapse collapse show"
-            aria-labelledby="unmatchedFiltersHeading"
-            data-bs-parent="#unmatchedFilters"
-          >
-            <div className="accordion-body">
-              <div className="hrGreyLine"></div>
-              <div className="configSelectBoxTop row">
-                <div className="clientNameSelect col">
-                  <label htmlFor="clientName">Bank</label>
-                  <Select
-                    defaultValue={clientName}
-                    onChange={() => {
-                      setClientName();
-                      changeClientName();
-                    }}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="All"
-                  />
-                </div>
-
-                <div className="clientNameSelect col">
-                  <label htmlFor="clientName">LOC Type</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={() => {
-                      setClientName();
-                      changeClientName();
-                    }}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="All"
-                  />
-                </div>
-
-                <div className="clientNameSelect col">
-                  <label htmlFor="clientName">Queue Type</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={() => {
-                      setClientName();
-                      changeClientName();
-                    }}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="All"
-                  />
-                </div>
-
-                <div className="clientNameSelect col">
-                  <label htmlFor="clientName">Status</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={() => {
-                      setClientName();
-                      changeClientName();
-                    }}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="All"
-                  />
-                </div>
-
-                <div className="clientNameSelect col">
-                  <label htmlFor="clientName">State</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={() => {
-                      setClientName();
-                      changeClientName();
-                    }}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="All"
-                  />
-                </div>
-
-                <div className="clientNameSelect col">
-                  <label htmlFor="clientName">Site Type</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={() => {
-                      setClientName();
-                      changeClientName();
-                    }}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="All"
-                  />
-                </div>
-
-                <div className="clientNameSelect col">
-                  <label htmlFor="clientName">Call Type</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={() => {
-                      setClientName();
-                      changeClientName();
-                    }}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="All"
-                  />
-                </div>
-
-                <div className="clientNameSelect col">
-                  <label htmlFor="clientName">ATM Status</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={() => {
-                      setClientName();
-                      changeClientName();
-                    }}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="All"
-                  />
-                </div>
-
-                <div className="clientNameSelect col">
-                  <label htmlFor="clientName">Make</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={() => {
-                      setClientName();
-                      changeClientName();
-                    }}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="All"
-                  />
-                </div>
-
-                <div className="clientNameSelect col">
-                  <label htmlFor="clientName">Site Class</label>
-                  <Select
-                    defaultValue={selectedOption}
-                    onChange={() => {
-                      setClientName();
-                      changeClientName();
-                    }}
-                    options={options}
-                    id="clientName"
-                    classNamePrefix="reactSelectBox"
-                    placeholder="All"
-                  />
-                </div>
-              </div>
-
-              <div className="text-center btnsBtm">
-                <button
-                  type="button"
-                  className="btnPrimaryOutline"
-                  onClick={() => setResetFilters(!resetFilters)}
-                >
-                  Reset
-                </button>
-                <button
-                  type="button"
-                  className="btnPrimary ms-2"
-                  onClick={() => setSaveFilters(!saveFilters)}
-                >
-                  Search
-                </button>
-              </div>
-
-              {showFilters ? (
-                <div className="lightBlueBox configTopBlueBox absoluteFiltersBox">
-                  <div className="d-flex justify-content-between align-items-center configLeftFilters">
-                    <h6 className="fontWeight-600 colorBlack">
-                      Search Criteria
-                    </h6>
-                    <button
-                      type="button"
-                      className="allFiltersBtn"
-                      onClick={() => setShowFilters(false)}
-                    >
-                      <span>
-                        <svg
-                          width="24"
-                          height="100%"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 6L18 18"
-                            stroke="#004BBD"
-                            strokeWidth="1.8"
-                            strokeLinecap="round"
-                          />
-                          <path
-                            d="M18 6L6 18"
-                            stroke="#004BBD"
-                            strokeWidth="1.8"
-                            strokeLinecap="round"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                  <div className="hrGreyLine"></div>
-
-                  <div className="configSelectBoxTop row">
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Bank</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">LOC Type</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Queue Type</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Status</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">State</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Site Type</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Call Type</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">ATM Status</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Make</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Site Class</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Category</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Assigned To</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">CRA</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Criticality</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Sub Category</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="channelType">Call Date</label>
-                      <DatePicker
-                        selected={startDate}
-                        onChange={(date) => setStartDate(date)}
-                        className="unmatchedDate"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Worklist</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Ticket</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">CRA Visits</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="clientName">Sites</label>
-                      <Select
-                        defaultValue={selectedOption}
-                        onChange={() => {
-                          setClientName();
-                          changeClientName();
-                        }}
-                        options={options}
-                        id="clientName"
-                        classNamePrefix="reactSelectBox"
-                        placeholder="All"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="terminalCode">Enter Ticket ID</label>
-                      <input
-                        type="text"
-                        name="terminalCode"
-                        id="terminalCode"
-                        placeholder="Ticket ID"
-                        className="inputTextBox"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="terminalCode">Enter ATM ID</label>
-                      <input
-                        type="text"
-                        name="terminalCode"
-                        id="terminalCode"
-                        placeholder="ATM ID"
-                        className="inputTextBox"
-                      />
-                    </div>
-
-                    <div className="clientNameSelect col">
-                      <label htmlFor="terminalCode">Enter Site ID</label>
-                      <input
-                        type="text"
-                        name="terminalCode"
-                        id="terminalCode"
-                        placeholder="Site ID"
-                        className="inputTextBox"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="text-center btnsBtm">
-                    <button
-                      type="button"
-                      className="btnPrimaryOutline"
-                      onClick={() => setResetFilters(!resetFilters)}
-                    >
-                      Reset
-                    </button>
-                    <button
-                      type="button"
-                      className="btnPrimary ms-2"
-                      onClick={() => setSaveFilters(!saveFilters)}
-                    >
-                      Search
-                    </button>
-                  </div>
-                </div>
-              ) : null}
-            </div>
+          {/* Search and Reset Btns */}
+          <div className="text-center btnsBtm">
+            <button
+              type="button"
+              className="btnPrimaryOutline"
+              onClick={() => setResetFilters(!resetFilters)}
+            >
+              Reset
+            </button>
+            <button
+              type="button"
+              className="btnPrimary ms-2"
+              onClick={() => setSaveFilters(!saveFilters)}
+            >
+              Search
+            </button>
           </div>
         </div>
+
+        {/* Modals */}
+
+        {/* Reset Filters */}
+        {resetFilters && (
+          <Modal
+            show={resetFilters}
+            onHide={() => setResetFilters(!resetFilters)}
+            centered
+            className="defaultThemeModal mobile-defaultThemeModal saveFiltersModal errorFiltersModal centeredModal"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title className="fontSize16-sm letterSpacing-2">
+                Filters
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="text-center">
+              <img src={Error} alt="Success" />
+              <p className="letterSpacing-2 colorBlack">
+                Filters could not be reset due to internal server error.
+              </p>
+            </Modal.Body>
+          </Modal>
+        )}
+
+        {/* Save Filters */}
+        {saveFilters && (
+          <Modal
+            show={saveFilters}
+            onHide={() => setSaveFilters(!saveFilters)}
+            centered
+            className="defaultThemeModal saveFiltersModal mobile-defaultThemeModal centeredModal"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title className="fontSize16-sm letterSpacing-2">
+                Filters
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="text-center">
+              <img src={Success} alt="Success" />
+              <p className="letterSpacing-2 colorBlack">
+                Filters Reset Successfully!
+              </p>
+            </Modal.Body>
+          </Modal>
+        )}
       </div>
 
       {/* Summary */}
-      <div className="accordion newFilters" id="unmatchedFilters">
+      <div className="accordion" id="unmatchedFilters">
         <div className="accordion-item">
           <div
             className="d-flex justify-content-between align-items-center configLeftFilters accordion-header"

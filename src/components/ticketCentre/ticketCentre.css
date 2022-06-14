@@ -8,9 +8,11 @@
   padding: 12px;
   margin-bottom: 12px;
 }
+
 .ticketCenterSection .alert-warning strong {
   font-weight: 600;
 }
+
 .ticketCenterSection .alert-dismissible .btn-close {
   padding: 0;
   top: 50%;
@@ -27,27 +29,34 @@
 .summaryRed {
   color: #c54031 !important;
 }
+
 .summaryBlue {
   color: #00b6ef !important;
 }
+
 .summaryYellow {
   color: #e4b830 !important;
 }
+
 .summaryRow {
   width: 100%;
   display: flex;
 }
+
 .summaryRow .summaryTableBox:first-child {
   width: 272px;
 }
+
 .summaryRow .summaryTableBox:nth-child(2) {
   width: 537px;
   margin-left: 6px;
 }
+
 .summaryRow .summaryTableBox:last-child {
   width: 495px;
   margin-left: 6px;
 }
+
 .summaryTableBox {
   background-color: var(--border-box-bg);
   border: 1px solid var(--color-border-default);
@@ -55,10 +64,12 @@
   padding: 12px 0 12px 9px;
   margin-bottom: 12px;
 }
+
 .summaryTableBox .table {
   margin-top: 6px;
   margin-bottom: 0;
 }
+
 .summaryContentLeft thead th,
 .summaryContentLeft tbody td,
 .summaryContentCenter thead th,
@@ -70,12 +81,14 @@
   width: 25%;
   text-align: center;
 }
+
 .summaryContentLeft tbody td,
 .summaryContentCenter tbody td {
   font-weight: 600;
   font-size: var(--font-size12);
   padding-top: 4px;
 }
+
 .summaryContentCenter thead th,
 .summaryContentCenter tbody td {
   width: auto;
@@ -85,20 +98,24 @@
   min-height: inherit;
   margin-bottom: 0;
 }
+
 .tableContentBox .form-check-input {
   margin-top: 0;
   margin-right: 12px;
 }
+
 .tableContentBox .form-check-input:checked {
   background-color: var(--color-primary-default);
   border-color: var(--color-primary-default);
 }
+
 .circleNo {
   border-bottom: 12px dotted #e4b830;
   width: 12px;
   height: 12px;
   margin-right: 9px;
 }
+
 .ticketIdBox {
   width: 21px;
   height: 21px;
@@ -112,6 +129,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .atmIdBox {
   width: 21px;
   height: 21px;
@@ -125,9 +143,11 @@
   justify-content: center;
   align-items: center;
 }
+
 .callTypeBox {
   color: var(--color-secondary-default) !important;
 }
+
 .editYellowBox {
   background: #fff9d7;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -135,23 +155,28 @@
   width: 24px;
   height: 24px;
 }
+
 .addToWorkList {
   width: 175px;
   margin-left: 6px;
 }
+
 .ticketCentreTableHeader .btnPrimary,
 .ticketCentreTableHeader .btnPrimaryOutline {
   width: 70px;
 }
+
 .tableBorderBox .table .lightPinkNestedTable {
   --bs-table-bg: var(--light-pink-bg);
   --bs-table-accent-bg: var(--light-pink-bg);
   background-color: var(--light-pink-bg) !important;
   padding: 6px !important;
 }
-.tableBorderBox .table .lightPinkNestedTable .table thead tr th{
+
+.tableBorderBox .table .lightPinkNestedTable .table thead tr th {
   background-color: var(--light-pink-bg);
 }
+
 .closeNestedTableButton {
   width: 12px;
   height: 12px;
@@ -159,9 +184,11 @@
   border-radius: 50px;
   margin-left: 9px;
 }
+
 .icon-Icon-2 {
   color: #fff !important;
 }
+
 .OpenNestedTableButton {
   width: 12px;
   height: 12px;
@@ -169,24 +196,31 @@
   border-radius: 50px;
   margin-left: 9px;
 }
+
 .icon-Action-Icons:before {
   color: #fff !important;
 }
+
 .circleNoTwo {
   border-color: #c54031;
 }
+
 .circleNoThree {
   border-color: #424f66;
 }
+
 .circleNoFour {
   border-color: #e933a7;
 }
+
 .circleNoFive {
   border-color: #109d49;
 }
+
 .circleNoSix {
   border-color: #00b6ef;
 }
+
 .circleNoSeven {
   border-color: #c54031;
   color: #fff;
@@ -219,6 +253,7 @@
   padding: 18px 30px 30px;
   background-color: var(--color-background-default);
 }
+
 .errorFiltersModal .commentModalBody textarea {
   border: 1px solid var(--color-border-default);
   padding: 8px 0 0 12px;
@@ -228,13 +263,16 @@
   background-color: var(--border-box-bg);
   height: 80px;
 }
+
 .errorFiltersModal .commentModalBody .btnsBtm {
   margin-top: 18px;
   width: 100%;
 }
+
 .errorFiltersModal .commentModalBody .btnsBtm .btnPrimaryOutline {
   width: 49%;
 }
+
 .errorFiltersModal .commentModalBody .btnsBtm .btnPrimary {
   width: 49%;
 }
@@ -242,6 +280,7 @@
 .ticketCentreTableResponsive .table {
   width: 1800px;
 }
+
 .ticketCentreTableHeadBottom .ticketCenterTableHeadTop .addToWorkList {
   display: none;
 }
@@ -250,7 +289,48 @@
   display: none !important;
 }
 
+/*  */
+
+.newSearchBox {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-light-blue);
+  border: 1px solid var(--color-border-default);
+  border-radius: 8px;
+  padding: 0 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+
+.newSeachHeaderBtns {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.newSearchHeader {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .15s ease-in-out;
+}
+
+
+
+.newSearchBox .col {
+  flex: inherit;
+  padding: 0 6px;
+  width: 20%;
+  margin-top: 12px;
+}
+
+
 @media (max-width: 768px) {
+
   .ticketCentreTableHeader .ticketCenterTableHeadTop .addToWorkList,
   .ticketCentreTableHeader .ticketCenterTableHeadTop .btnPrimary,
   .ticketCentreTableHeader .ticketCenterTableHeadTop .btnPrimaryOutline {
@@ -260,37 +340,59 @@
   .ticketCentreTableHeader .ticketCenterTableHeadTop .has-search .form-control {
     width: 100%;
   }
+
   .ticketCentreTableHeader .ticketCenterTableHeadTop .has-search {
     width: 100%;
     margin-right: 3px;
   }
+
   .ticketCentreTableHeadBottom {
     display: flex !important;
   }
+
   .ticketCentreTableHeader .ticketCentreTableHeadBottom .addToWorkList {
     width: 100% !important;
   }
+
   .summaryRow {
     flex-direction: column;
   }
+
   .summaryRow .summaryTableBox:first-child,
   .summaryRow .summaryTableBox:nth-child(2),
-  .summaryRow .summaryTableBox:last-child{
+  .summaryRow .summaryTableBox:last-child {
     width: 100%;
     margin-left: 0;
   }
-  .errorFiltersModal .commentModalBody .btnsBtm .btnPrimaryOutline{
+
+  .errorFiltersModal .commentModalBody .btnsBtm .btnPrimaryOutline {
     width: 48%;
   }
 }
 
 
-.modalDialogCenteredFix .modal-dialog{
+.modalDialogCenteredFix .modal-dialog {
   max-width: 400px !important;
 }
 
 
-/* new All filters */
-.newFilters{
-  margin-top: 12px;
+
+@media(max-width:800px){
+
+  .newSearchBox .col {
+      flex: inherit;
+      padding: 0 6px;
+      width: 25%;
+      margin-top: 12px;
+    }
+}
+
+@media(max-width:500px){
+
+  .newSearchBox .col {
+      flex: inherit;
+      padding: 0 6px;
+      width: 100%;
+      margin-top: 12px;
+    }
 }
